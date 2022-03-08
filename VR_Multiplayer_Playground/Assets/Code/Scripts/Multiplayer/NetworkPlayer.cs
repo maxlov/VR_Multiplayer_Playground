@@ -16,9 +16,9 @@ public class NetworkPlayer : MonoBehaviour
         if (!photonView.IsMine)
             return;
 
-        head.gameObject.SetActive(false);
-        rightHand.gameObject.SetActive(false);
-        leftHand.gameObject.SetActive(false);
+        head.GetChild(0).gameObject.SetActive(false);
+        rightHand.GetChild(0).gameObject.SetActive(false);
+        leftHand.GetChild(0).gameObject.SetActive(false);
     }
 
     private void Update()
