@@ -4,6 +4,8 @@ using Photon.Realtime;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private int roomIndex;
+
     void Start()
     {
         ConnectToServer();
@@ -24,7 +26,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         roomOptions.IsVisible = true;
         roomOptions.IsOpen = true;
 
-        PhotonNetwork.JoinOrCreateRoom("Room 1", roomOptions, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("Room " + roomIndex.ToString(), roomOptions, TypedLobby.Default);
     }
 
     public override void OnJoinedRoom()
@@ -35,7 +37,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log("A new player joined the room");
+        Debug.Log("A new player joined the room, " + newPlayer.NickName);
         base.OnPlayerEnteredRoom(newPlayer);
     }
 }
