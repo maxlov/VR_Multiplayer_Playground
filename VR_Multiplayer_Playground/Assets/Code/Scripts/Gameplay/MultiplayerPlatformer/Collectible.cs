@@ -9,10 +9,13 @@ public class Collectible : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            score.value += collectibleValue.value;
-            gameObject.SetActive(false);
-        }    
+        score.value += collectibleValue.value;
+        gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        score.value += collectibleValue.value;
+        gameObject.SetActive(false);
     }
 }

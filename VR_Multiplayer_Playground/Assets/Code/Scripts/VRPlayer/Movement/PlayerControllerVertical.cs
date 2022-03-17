@@ -28,7 +28,7 @@ public class PlayerControllerVertical : MonoBehaviour
         SetupJumpVariables();
     }
 
-    void SetupJumpVariables()
+    public void SetupJumpVariables()
     {
         float timeToApex = jumpTime.value / 2;
         gravity = (-2 * jumpHeight.value / Mathf.Pow(timeToApex, 2));
