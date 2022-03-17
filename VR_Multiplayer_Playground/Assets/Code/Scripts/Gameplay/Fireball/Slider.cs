@@ -16,6 +16,6 @@ public class Slider : MonoBehaviour
 
     void Update()
     {
-        image.fillAmount = Mathf.Clamp01(charge.Value);
+        image.fillAmount = Mathf.Clamp01(charge.value);
     }
 }
