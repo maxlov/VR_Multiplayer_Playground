@@ -1,0 +1,45 @@
+{
+    "name": "VRMultiplayerMovement",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "1e993bc5-6cc8-4243-aeed-e6356a38a655",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "269cb21b-afe0-48ec-9231-2281c774fc79",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3ffd01b2-1a58-4f96-a95a-d2a5f95ab416",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "35b14766-b253-4580-bbaa-15b777765c6d",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
