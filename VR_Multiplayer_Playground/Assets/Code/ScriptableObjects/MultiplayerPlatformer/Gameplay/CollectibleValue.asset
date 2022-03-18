@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d96fd70a395a551419a0c4ffc9ec712b, type: 3}
   m_Name: CollectibleValue
   m_EditorClassIdentifier: 
-  value: 10
+  DeveloperDescription: Value of collectible, added on pickup
+  defaultValue: 10
+  _value: 10

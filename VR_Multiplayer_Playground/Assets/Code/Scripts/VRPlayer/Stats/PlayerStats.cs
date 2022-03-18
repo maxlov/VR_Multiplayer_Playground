@@ -18,9 +18,9 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        speed.value = speedInitial.value;
-        jumpHeight.value = jumpHeightInitial.value;
-        jumpTime.value = jumpTimeInitial.value;
-        fallMultiplier.value = fallMultiplierInitial.value;
+        speed.Value = speedInitial.Value;
+        jumpHeight.Value = jumpHeightInitial.Value;
+        jumpTime.Value = jumpTimeInitial.Value;
+        fallMultiplier.Value = fallMultiplierInitial.Value;
     }
 }

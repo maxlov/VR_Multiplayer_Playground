@@ -1,21 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Collectible : MonoBehaviour
 {
     [SerializeField] private FloatVariable collectibleValue;
     [SerializeField] private FloatVariable score;
+    [SerializeField] private UnityEvent ScoreUpdateEvent;
 
     private void OnCollisionEnter(Collision collision)
     {
-        score.value += collectibleValue.value;
-        gameObject.SetActive(false);
+        UpdateScore();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        score.value += collectibleValue.value;
-        gameObject.SetActive(false);
+        UpdateScore();
+    }
+
+    private void UpdateScore()
+    {
+        score.ApplyChange(collectibleValue.Value);
+        ScoreUpdateEvent.Invoke();
+        //gameObject.SetActive(false);
     }
 }

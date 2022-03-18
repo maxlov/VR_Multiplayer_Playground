@@ -30,9 +30,9 @@ public class PlayerControllerVertical : MonoBehaviour
 
     public void SetupJumpVariables()
     {
-        float timeToApex = jumpTime.value / 2;
-        gravity = (-2 * jumpHeight.value / Mathf.Pow(timeToApex, 2));
-        initialJumpVelocity = (2 * jumpHeight.value) / timeToApex;
+        float timeToApex = jumpTime.Value / 2;
+        gravity = (-2 * jumpHeight.Value / Mathf.Pow(timeToApex, 2));
+        initialJumpVelocity = (2 * jumpHeight.Value) / timeToApex;
     }
 
 
@@ -58,7 +58,7 @@ public class PlayerControllerVertical : MonoBehaviour
 
         if (isFalling)
         {
-            currentYVelocity += (gravity * fallMultiplier.value * Time.deltaTime);
+            currentYVelocity += (gravity * fallMultiplier.Value * Time.deltaTime);
             appliedYVelocity = Mathf.Max((previousYVelocity + currentYVelocity) * .5f, -20f);
 
             // reset player position when player has fallen

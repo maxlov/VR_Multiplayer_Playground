@@ -823,7 +823,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234941174}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 896fb76c0dbe667489d817a0a04bbaea, type: 3}
   m_Name: 
@@ -3832,6 +3832,7 @@ GameObject:
   - component: {fileID: 942318908}
   - component: {fileID: 942318907}
   - component: {fileID: 942318909}
+  - component: {fileID: 942318910}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -3880,7 +3881,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score:
 
-    100'
+    0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3969,7 +3970,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd4b5a92ddd7114f841365fd4c52f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 11400000, guid: 310e51ee2c8e63843828ad748ad3fcd8, type: 2}
+  input:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 310e51ee2c8e63843828ad748ad3fcd8, type: 2}
+  text: 'Score:
+
+'
+  useFloat: 1
+--- !u!114 &942318910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942318905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd41b8fd24c66e44841d94414b93580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d5887c7d34f20874f8ec4ca0406ee7a5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 942318909}
+        m_TargetAssemblyTypeName: TextUpdater, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &976502568
 GameObject:
   m_ObjectHideFlags: 0
@@ -6916,6 +6952,10 @@ PrefabInstance:
       propertyPath: floatVariables.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 090d93d4dc40bf24789b5b1d4df70094, type: 2}
+    - target: {fileID: 2951442349596665378, guid: f55f07eccff9be64eb49fa52b6939f0c, type: 3}
+      propertyPath: percentIncrease.ConstantValue
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4976542665803632037, guid: f55f07eccff9be64eb49fa52b6939f0c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -7164,7 +7204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953644542}
   m_LocalRotation: {x: -0, y: 0.6629018, z: -0, w: 0.74870634}
-  m_LocalPosition: {x: 0.9299998, y: -0.69000006, z: 1.7700001}
+  m_LocalPosition: {x: 0.97, y: -0.69000006, z: 1.46}
   m_LocalScale: {x: 4.507927, y: 0.8392723, z: 4.3835177}
   m_Children: []
   m_Father: {fileID: 512616200}
@@ -7500,6 +7540,10 @@ PrefabInstance:
       propertyPath: multiplier
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2951442349596665378, guid: f55f07eccff9be64eb49fa52b6939f0c, type: 3}
+      propertyPath: percentIncrease.ConstantValue
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4976542665803632037, guid: f55f07eccff9be64eb49fa52b6939f0c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -7602,11 +7646,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3892908781985725639, guid: 51c6de87e1605f24fb6d161002e0d3e1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5976320513249462254, guid: 51c6de87e1605f24fb6d161002e0d3e1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6548640158518124657, guid: 51c6de87e1605f24fb6d161002e0d3e1, type: 3}
       propertyPath: m_InteractionManager

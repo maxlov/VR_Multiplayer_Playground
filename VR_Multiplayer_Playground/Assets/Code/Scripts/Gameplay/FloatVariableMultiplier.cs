@@ -5,12 +5,11 @@ using UnityEngine;
 public class FloatVariableMultiplier : MonoBehaviour
 {
     [SerializeField] private FloatVariable[] floatVariables;
-    [Range(1.0f, 3.0f)]
-    [SerializeField] private float multiplier;
+    [SerializeField] private FloatReference percentIncrease;
 
     public void Multiply()
     {
         foreach (var fv in floatVariables)
-            fv.value *= multiplier;
+            fv.Value += fv.defaultValue * percentIncrease;
     }
 }

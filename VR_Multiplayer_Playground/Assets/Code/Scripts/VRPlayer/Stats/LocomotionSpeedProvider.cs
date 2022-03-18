@@ -11,6 +11,6 @@ public class LocomotionSpeedProvider : MonoBehaviour
 
     private void Update()
     {
-        _mover.moveSpeed = _speed.value;
+        _mover.moveSpeed = _speed.Value;
     }
 }

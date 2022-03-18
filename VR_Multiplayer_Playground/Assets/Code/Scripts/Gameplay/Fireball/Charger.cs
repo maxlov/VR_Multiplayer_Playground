@@ -24,11 +24,11 @@ public class Charger : MonoBehaviour
     private void Update()
     {
         if (isCharging)
-            _charge.value += Time.deltaTime;
+            _charge.Value += Time.deltaTime;
         else
-            _charge.value -= Time.deltaTime;
+            _charge.Value -= Time.deltaTime;
 
-        _charge.value = Mathf.Clamp(_charge.value, 0, 10);
+        _charge.Value = Mathf.Clamp(_charge.Value, 0, 10);
     }
 
     private void OnCharge() { isCharging = true; }

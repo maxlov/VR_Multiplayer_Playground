@@ -8,6 +8,6 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        score.value = 0;
+        score.Value = 0;
     }
 }
