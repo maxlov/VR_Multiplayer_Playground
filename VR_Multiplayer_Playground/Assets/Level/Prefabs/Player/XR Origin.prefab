@@ -1500,18 +1500,18 @@ MonoBehaviour:
   m_AudioClipForOnHoverExited: {fileID: 0}
   m_PlayAudioClipOnHoverCanceled: 0
   m_AudioClipForOnHoverCanceled: {fileID: 0}
-  m_PlayHapticsOnSelectEntered: 0
-  m_HapticSelectEnterIntensity: 0
-  m_HapticSelectEnterDuration: 0
+  m_PlayHapticsOnSelectEntered: 1
+  m_HapticSelectEnterIntensity: 0.3
+  m_HapticSelectEnterDuration: 0.1
   m_PlayHapticsOnSelectExited: 0
   m_HapticSelectExitIntensity: 0
   m_HapticSelectExitDuration: 0
   m_PlayHapticsOnSelectCanceled: 0
   m_HapticSelectCancelIntensity: 0
   m_HapticSelectCancelDuration: 0
-  m_PlayHapticsOnHoverEntered: 0
-  m_HapticHoverEnterIntensity: 0
-  m_HapticHoverEnterDuration: 0
+  m_PlayHapticsOnHoverEntered: 1
+  m_HapticHoverEnterIntensity: 0.1
+  m_HapticHoverEnterDuration: 0.1
   m_PlayHapticsOnHoverExited: 0
   m_HapticHoverExitIntensity: 0
   m_HapticHoverExitDuration: 0
@@ -1545,6 +1545,7 @@ GameObject:
   - component: {fileID: 6548640158904460317}
   - component: {fileID: 6548640158904460312}
   - component: {fileID: 6548640158904460319}
+  - component: {fileID: 234941181}
   m_Layer: 7
   m_Name: XR Origin
   m_TagString: Untagged
@@ -1631,9 +1632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8829f58b2f117904a8bef2eb485326a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: {fileID: 0}
-  jumpTime: {fileID: 0}
-  fallMultiplier: {fileID: 0}
+  jumpHeight: {fileID: 11400000, guid: 7ccd9a27f80ac3a4f85696858d6e93fe, type: 2}
+  jumpTime: {fileID: 11400000, guid: 090d93d4dc40bf24789b5b1d4df70094, type: 2}
+  fallMultiplier: {fileID: 11400000, guid: 901a568b636a302478db7f200cbe02eb, type: 2}
   jumpActionReference: {fileID: 7916990872088065909, guid: 85351a03460a6ff4b8a80f7955351068, type: 3}
 --- !u!114 &6548640158904460319
 MonoBehaviour:
@@ -1647,6 +1648,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725926608eb60f745af5a06350ac94ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &234941181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548640158904460306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4064a4c0252e85d43878715d84e781d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mover: {fileID: 6548640159701513563}
+  _speed: {fileID: 11400000, guid: 817658bdd0fa35a4e861c95ad6784761, type: 2}
 --- !u!1 &6548640159701513567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,7 +1764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 6548640159701513561}
-  m_TurnSpeed: 110
+  m_TurnSpeed: 140
   m_LeftHandTurnAction:
     m_UseReference: 0
     m_Action:
@@ -2034,18 +2049,18 @@ MonoBehaviour:
   m_AudioClipForOnHoverExited: {fileID: 0}
   m_PlayAudioClipOnHoverCanceled: 0
   m_AudioClipForOnHoverCanceled: {fileID: 0}
-  m_PlayHapticsOnSelectEntered: 0
-  m_HapticSelectEnterIntensity: 0
-  m_HapticSelectEnterDuration: 0
+  m_PlayHapticsOnSelectEntered: 1
+  m_HapticSelectEnterIntensity: 0.3
+  m_HapticSelectEnterDuration: 0.1
   m_PlayHapticsOnSelectExited: 0
   m_HapticSelectExitIntensity: 0
   m_HapticSelectExitDuration: 0
   m_PlayHapticsOnSelectCanceled: 0
   m_HapticSelectCancelIntensity: 0
   m_HapticSelectCancelDuration: 0
-  m_PlayHapticsOnHoverEntered: 0
-  m_HapticHoverEnterIntensity: 0
-  m_HapticHoverEnterDuration: 0
+  m_PlayHapticsOnHoverEntered: 1
+  m_HapticHoverEnterIntensity: 0.1
+  m_HapticHoverEnterDuration: 0.1
   m_PlayHapticsOnHoverExited: 0
   m_HapticHoverExitIntensity: 0
   m_HapticHoverExitDuration: 0
