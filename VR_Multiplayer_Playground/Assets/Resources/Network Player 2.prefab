@@ -2261,9 +2261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53760852c866b4649930a2c61887c993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 4921084528621189564}
-  leftHand: {fileID: 8697314697727788610}
-  rightHand: {fileID: 5721229859838621623}
+  head: {fileID: 803626883393204861}
+  leftHand: {fileID: 8199312777960351991}
+  rightHand: {fileID: 430203941602092528}
   headOrigin: {fileID: 0}
   leftHandOrigin: {fileID: 0}
   rightHandOrigin: {fileID: 0}
