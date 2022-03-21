@@ -4,7 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 using Unity.XR.CoreUtils;
 using Photon.Pun;
 
-public class NetworkPlayer : MonoBehaviour
+public class NetworkPlayerNew : MonoBehaviour
 {
     [Header("XR Trackable Transforms")]
     public Transform head;
@@ -25,17 +25,16 @@ public class NetworkPlayer : MonoBehaviour
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
-        XROrigin origin = FindObjectOfType<XROrigin>();
 
         if (!photonView.IsMine)
             return;
 
-        headOrigin = origin.transform.Find("Camera Offset/Main Camera");
-        leftHandOrigin = origin.transform.Find("Camera Offset/LeftHand Controller");
-        rightHandOrigin = origin.transform.Find("Camera Offset/RightHand Controller");
+        //headOrigin = origin.transform.Find("Camera Offset/Main Camera");
+        //leftHandOrigin = origin.transform.Find("Camera Offset/LeftHand Controller");
+        //rightHandOrigin = origin.transform.Find("Camera Offset/RightHand Controller");
 
-        foreach (var item in GetComponentsInChildren<Renderer>())
-            item.enabled = false;
+        //foreach (var item in GetComponentsInChildren<Renderer>())
+        //    item.enabled = false;
     }
 
     private void Update()
