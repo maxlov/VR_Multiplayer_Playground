@@ -14,9 +14,9 @@ TagManager:
   - Interactable
   - Player
   - PlayerObject
-  - 
-  - 
-  - 
+  - LeftHandPhysics
+  - RightHandPhysics
+  - OutOfBoundsHandRenderLayer
   - 
   - 
   - 

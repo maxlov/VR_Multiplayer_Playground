@@ -11,43 +11,43 @@ public class NetworkPlayer : MonoBehaviour
     public Transform leftHand;
     public Transform rightHand;
 
-    [Header("Hand Animators")]
-    public Animator leftHandAnimator;
-    public Animator rightHandAnimator;
+    //[Header("Hand Animators")]
+    //public Animator leftHandAnimator;
+    //public Animator rightHandAnimator;
 
     private PhotonView photonView;
 
-    private Transform headOrigin;
-    private Transform leftHandOrigin;
-    private Transform rightHandOrigin;
+    [Header("Passed in Trackers")]
+    public Transform headOrigin;
+    public Transform leftHandOrigin;
+    public Transform rightHandOrigin;
 
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
-        XROrigin origin = FindObjectOfType<XROrigin>();
 
         if (!photonView.IsMine)
             return;
 
-        headOrigin = origin.transform.Find("Camera Offset/Main Camera");
-        leftHandOrigin = origin.transform.Find("Camera Offset/LeftHand Controller");
-        rightHandOrigin = origin.transform.Find("Camera Offset/RightHand Controller");
+        //headOrigin = origin.transform.Find("Camera Offset/Main Camera");
+        //leftHandOrigin = origin.transform.Find("Camera Offset/LeftHand Controller");
+        //rightHandOrigin = origin.transform.Find("Camera Offset/RightHand Controller");
 
-        foreach (var item in GetComponentsInChildren<Renderer>())
-            item.enabled = false;
+        //foreach (var item in GetComponentsInChildren<Renderer>())
+        //    item.enabled = false;
     }
 
     private void Update()
     {
-        if (!photonView.IsMine)
-            return;
+        //if (!photonView.IsMine)
+        //    return;
 
         MapPosition(head, headOrigin);
         MapPosition(leftHand, leftHandOrigin);
         MapPosition(rightHand, rightHandOrigin);
 
-        UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
-        UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
+        //UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
+        //UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
     }
 
     void MapPosition(Transform target, Transform originTransform)

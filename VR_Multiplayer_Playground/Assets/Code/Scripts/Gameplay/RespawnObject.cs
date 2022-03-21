@@ -17,9 +17,14 @@ public class RespawnObject : MonoBehaviour
 	{
 		if (other.CompareTag("Respawn"))
 		{
-			gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-			transform.position = spawnPosition;
-			transform.rotation = spawnRotation;
+			Respawn();
 		}
+	}
+
+	public void Respawn()
+	{
+		gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+		transform.position = spawnPosition;
+		transform.rotation = spawnRotation;
 	}
 }
