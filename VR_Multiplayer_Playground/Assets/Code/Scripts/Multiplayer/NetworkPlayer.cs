@@ -21,9 +21,6 @@ public class NetworkPlayer : MonoBehaviour
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
-
-        if (!photonView.IsMine)
-            return;
     }
 
     private void Update()

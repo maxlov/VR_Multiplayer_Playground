@@ -1,32 +1,48 @@
 ﻿using System.Collections;
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
-using Photon.Pun.UtilityScripts;
 using UnityEngine.Events;
 
 public class GameManager : MonoBehaviourPunCallbacks
 {
-    private UnityEvent StartGameEvent;
+    [SerializeField] private Transform player;
+    [SerializeField] private SpawnManagerSO[] spawnManagers;
 
-    [SerializeField] private GameObject player;
+    [SerializeField] private float endTime = 2f;
 
-    public void TryStartGame()
-    {
-        if (!photonView.IsMine)
-        {
-            Debug.Log("Only master client can start game");
-            return;
-        }
+    [SerializeField] private UnityEvent StartGameEvent;
+    [SerializeField] private UnityEvent EndGameEvent;
 
-        photonView.RPC("RPC_StartGame", RpcTarget.AllBuffered);
-    }
-
-    [PunRPC]
-    void RPC_StartGame()
+    public void StartGame()
     {
         Debug.Log("Starting game");
         StartGameEvent.Invoke();
+        SpawnPlayer();
     }
 
+    public void SpawnPlayer()
+    {
+        int team = 0;
+
+        if (PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Team"))
+            team = (int)PhotonNetwork.LocalPlayer.CustomProperties["Team"];
+
+        spawnManagers[team].AddAllSpawns();
+        player.position = spawnManagers[team].GetSpawn();
+    }
+
+    public void EndGame()
+    {
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
+        Debug.Log("Ending game");
+        StartCoroutine(EndGameCoroutine());
+    }
+
+    IEnumerator EndGameCoroutine()
+    {
+        yield return new WaitForSeconds(endTime);
+        PhotonNetwork.LoadLevel(0);
+    }
 }

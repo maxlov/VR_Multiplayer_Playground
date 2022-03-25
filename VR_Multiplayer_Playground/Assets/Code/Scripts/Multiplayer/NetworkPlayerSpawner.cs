@@ -1,43 +1,59 @@
-using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon.Pun.UtilityScripts;
+using UnityEngine;
 using UnityEngine.Events;
+using Unity.XR.CoreUtils;
 
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
-    private GameObject spawnedPlayerPrefab;
     private GameObject player;
 
-    public Transform initialSpawn;
+    public Vector3 initialSpawn;
 
-    [Header("Tracking Transforms")]
-    public Transform clientHeadTracker;
-    public Transform clientLeftHandTracker;
-    public Transform clientRightHandTracker;
+    private Transform clientHeadTracker;
+    private Transform clientLeftHandTracker;
+    private Transform clientRightHandTracker;
 
     [SerializeField] private UnityEvent TeamJoinEvent;
 
     private void Awake()
     {
-        if (initialSpawn == null) { initialSpawn = transform; }
+        if (initialSpawn == null) { initialSpawn = transform.position; }
     }
 
     #region PUN CALLBACKS
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        player = PhotonNetwork.Instantiate("Network Player 2", initialSpawn.position, Quaternion.identity);
+        JoinTeam(0);
+    }
+
+    public void CreatePlayer()
+    {
+        // There are four finds in this script, this is pretty gross but quick solution for now
+        XROrigin origin = FindObjectOfType<XROrigin>();
+
+        if (origin == null)
+        {
+            Debug.Log("No XROrigin found, cannot set tracking");
+            return;
+        }
+
+        clientHeadTracker = origin.transform.Find("Camera Offset/Main Camera");
+        clientLeftHandTracker = origin.transform.Find("Camera Offset/LeftHand Controller");
+        clientRightHandTracker = origin.transform.Find("Camera Offset/RightHand Controller");
+
+        player = PhotonNetwork.Instantiate("Network Player 2", initialSpawn, Quaternion.identity);
         player.GetComponent<NetworkPlayer>().headOrigin = clientHeadTracker;
         player.GetComponent<NetworkPlayer>().leftHandOrigin = clientLeftHandTracker;
         player.GetComponent<NetworkPlayer>().rightHandOrigin = clientRightHandTracker;
-        JoinTeam(0);
     }
 
     public override void OnLeftRoom()
     {
         base.OnLeftRoom();
-        PhotonNetwork.Destroy(spawnedPlayerPrefab);
+        PhotonNetwork.Destroy(player);
     }
     #endregion
 
