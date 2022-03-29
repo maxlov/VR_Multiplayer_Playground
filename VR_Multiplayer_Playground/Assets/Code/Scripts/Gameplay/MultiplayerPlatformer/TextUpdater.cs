@@ -16,6 +16,10 @@ public class TextUpdater : MonoBehaviour
     private void Start()
     {
         textUI = GetComponent<TextMeshProUGUI>();
+    }
+
+    void Update()
+    {
         UpdateText();
     }
 
@@ -23,7 +27,7 @@ public class TextUpdater : MonoBehaviour
     {
         currentText = text;
         if (useFloat && input != null)
-            currentText += input.Value;
+            currentText = input.Value.ToString();
         textUI.text = currentText;
     }
 }
