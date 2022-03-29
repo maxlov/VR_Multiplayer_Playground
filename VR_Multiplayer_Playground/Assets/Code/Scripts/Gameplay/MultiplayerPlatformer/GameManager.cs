@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] private Transform player;
+    [SerializeField] private Transform playerParent;
     [SerializeField] private SpawnManagerSO[] spawnManagers;
 
     [SerializeField] private float endTime = 2f;
@@ -28,7 +29,14 @@ public class GameManager : MonoBehaviourPunCallbacks
             team = (int)PhotonNetwork.LocalPlayer.CustomProperties["Team"];
 
         spawnManagers[team].AddAllSpawns();
-        player.position = spawnManagers[team].GetSpawn();
+        var spawn = spawnManagers[team].GetSpawn();
+        if (spawn == null)
+        {
+            Debug.Log($"Spawn for team {team} not found. Spawning at (0,0,0)");
+            spawn = Vector3.zero;
+        }
+        playerParent.position = spawn;
+        player.position = spawn;
     }
 
     public void EndGame()

@@ -19,7 +19,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     private void Awake()
     {
         if (NetworkManager.networkManager != null)
+        {
             Destroy(gameObject);
+            return;
+        }
         networkManager = this;
         DontDestroyOnLoad(this.gameObject);
 
@@ -68,6 +71,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Joined a Room");
         base.OnJoinedRoom();
+        SpawnPlayerEvent.Invoke();
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)

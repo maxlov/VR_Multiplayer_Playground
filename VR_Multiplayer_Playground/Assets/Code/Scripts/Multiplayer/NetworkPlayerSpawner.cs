@@ -45,9 +45,10 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         clientRightHandTracker = origin.transform.Find("Camera Offset/RightHand Controller");
 
         player = PhotonNetwork.Instantiate("Network Player 2", initialSpawn, Quaternion.identity);
-        player.GetComponent<NetworkPlayer>().headOrigin = clientHeadTracker;
-        player.GetComponent<NetworkPlayer>().leftHandOrigin = clientLeftHandTracker;
-        player.GetComponent<NetworkPlayer>().rightHandOrigin = clientRightHandTracker;
+        NetworkPlayer networkPlayer = player.GetComponent<NetworkPlayer>();
+        networkPlayer.headOrigin = clientHeadTracker;
+        networkPlayer.leftHandOrigin = clientLeftHandTracker;
+        networkPlayer.rightHandOrigin = clientRightHandTracker;
     }
 
     public override void OnLeftRoom()
