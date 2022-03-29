@@ -14,7 +14,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public int currectScene;
     public int gameScene;
 
-    public UnityEvent SpawnPlayerEvent;
+    [SerializeField] private UnityEvent SpawnPlayerEvent;
+    [SerializeField] private UnityEvent StartGameEvent;
 
     private void Awake()
     {
@@ -85,7 +86,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         currectScene = scene.buildIndex;
         if (currectScene == gameScene)
         {
+            Debug.Log("Starting game");
             SpawnPlayerEvent.Invoke();
+            StartGameEvent.Invoke();
         }
     }
 

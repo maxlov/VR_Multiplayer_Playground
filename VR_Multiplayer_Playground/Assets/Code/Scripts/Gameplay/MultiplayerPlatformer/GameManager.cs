@@ -11,15 +11,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     [SerializeField] private float endTime = 2f;
 
-    [SerializeField] private UnityEvent StartGameEvent;
     [SerializeField] private UnityEvent EndGameEvent;
-
-    public void StartGame()
-    {
-        Debug.Log("Starting game");
-        StartGameEvent.Invoke();
-        SpawnPlayer();
-    }
 
     public void SpawnPlayer()
     {

@@ -9,12 +9,13 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
     private GameObject player;
 
-    public Vector3 initialSpawn;
+    private Vector3 initialSpawn;
 
     private Transform clientHeadTracker;
     private Transform clientLeftHandTracker;
     private Transform clientRightHandTracker;
 
+    [SerializeField] private int startTeam = 0;
     [SerializeField] private UnityEvent TeamJoinEvent;
 
     private void Awake()
@@ -26,7 +27,7 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        JoinTeam(0);
+        JoinTeam(startTeam);
     }
 
     public void CreatePlayer()

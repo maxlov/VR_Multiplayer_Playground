@@ -13,10 +13,12 @@ public class NetworkPlayer : MonoBehaviour
 
     private PhotonView photonView;
 
-    [Header("Passed in Trackers")]
-    public Transform headOrigin;
-    public Transform leftHandOrigin;
-    public Transform rightHandOrigin;
+    [HideInInspector] public Transform headOrigin;
+    [HideInInspector] public Transform leftHandOrigin;
+    [HideInInspector] public Transform rightHandOrigin;
+
+    [Space(10)]
+    public SkinnedMeshRenderer mesh;
 
     private void Start()
     {
@@ -28,6 +30,8 @@ public class NetworkPlayer : MonoBehaviour
         if (!photonView.IsMine)
            return;
 
+        mesh.enabled = false;
+
         MapPosition(head, headOrigin);
         MapPosition(leftHand, leftHandOrigin);
         MapPosition(rightHand, rightHandOrigin);
@@ -36,18 +40,5 @@ public class NetworkPlayer : MonoBehaviour
     void MapPosition(Transform target, Transform originTransform)
     {        
         target.SetPositionAndRotation(originTransform.position, originTransform.rotation);
-    }
-
-    void UpdateHandAnimation(InputDevice targetDevice, Animator handAnimator)
-    {
-        if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
-            handAnimator.SetFloat("Trigger", triggerValue);
-        else
-            handAnimator.SetFloat("Trigger", 0);
-
-        if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
-            handAnimator.SetFloat("Grip", gripValue);
-        else
-            handAnimator.SetFloat("Grip", 0);
     }
 }
