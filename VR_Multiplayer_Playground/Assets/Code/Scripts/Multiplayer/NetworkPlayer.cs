@@ -11,31 +11,18 @@ public class NetworkPlayer : MonoBehaviour
     public Transform leftHand;
     public Transform rightHand;
 
-    //[Header("Hand Animators")]
-    //public Animator leftHandAnimator;
-    //public Animator rightHandAnimator;
-
     private PhotonView photonView;
 
-    [Header("Passed in Trackers")]
-    public Transform headOrigin;
-    public Transform leftHandOrigin;
-    public Transform rightHandOrigin;
+    [HideInInspector] public Transform headOrigin;
+    [HideInInspector] public Transform leftHandOrigin;
+    [HideInInspector] public Transform rightHandOrigin;
+
+    [Space(10)]
+    public SkinnedMeshRenderer mesh;
 
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
-        //XROrigin origin = FindObjectOfType<XROrigin>();
-
-        if (!photonView.IsMine)
-            return;
-
-        //headOrigin = origin.transform.Find("Camera Offset/Main Camera");
-        //leftHandOrigin = origin.transform.Find("Camera Offset/LeftHand Controller");
-        //rightHandOrigin = origin.transform.Find("Camera Offset/RightHand Controller");
-
-        //foreach (var item in GetComponentsInChildren<Renderer>())
-        //    item.enabled = false;
     }
 
     private void Update()
@@ -43,29 +30,15 @@ public class NetworkPlayer : MonoBehaviour
         if (!photonView.IsMine)
            return;
 
+        mesh.enabled = false;
+
         MapPosition(head, headOrigin);
         MapPosition(leftHand, leftHandOrigin);
         MapPosition(rightHand, rightHandOrigin);
-
-        //UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
-        //UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
     }
 
     void MapPosition(Transform target, Transform originTransform)
     {        
         target.SetPositionAndRotation(originTransform.position, originTransform.rotation);
-    }
-
-    void UpdateHandAnimation(InputDevice targetDevice, Animator handAnimator)
-    {
-        if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
-            handAnimator.SetFloat("Trigger", triggerValue);
-        else
-            handAnimator.SetFloat("Trigger", 0);
-
-        if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
-            handAnimator.SetFloat("Grip", gripValue);
-        else
-            handAnimator.SetFloat("Grip", 0);
     }
 }

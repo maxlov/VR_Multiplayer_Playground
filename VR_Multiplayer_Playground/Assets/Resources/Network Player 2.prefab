@@ -2267,6 +2267,7 @@ MonoBehaviour:
   headOrigin: {fileID: 0}
   leftHandOrigin: {fileID: 0}
   rightHandOrigin: {fileID: 0}
+  mesh: {fileID: 1989058622846587701}
 --- !u!114 &7575937509813160739
 MonoBehaviour:
   m_ObjectHideFlags: 0

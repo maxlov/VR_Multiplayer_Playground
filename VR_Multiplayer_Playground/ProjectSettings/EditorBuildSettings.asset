@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Level/Scenes/MaxPrototypeVR.unity
-    guid: 0cc55e1747dcffe41bf2c9b07289c3cb
+    path: Assets/Level/Scenes/Main/MainLobby.unity
+    guid: 3fa46ac08107cd34694e87fff7b83428
+  - enabled: 1
+    path: Assets/Level/Scenes/Main/Arena1.unity
+    guid: d18340ee22a39714085edc8e184f5ffc
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 11c74e30f48ca824cb09934675369101, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 0ab52cfa957d3ea4dab65abd2673736e, type: 2}
