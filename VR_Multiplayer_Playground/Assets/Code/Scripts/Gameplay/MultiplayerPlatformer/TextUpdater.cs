@@ -27,7 +27,7 @@ public class TextUpdater : MonoBehaviour
     {
         currentText = text;
         if (useFloat && input != null)
-            currentText = input.Value.ToString();
+            currentText = input.Value.ToString("F2");
         textUI.text = currentText;
     }
 }
