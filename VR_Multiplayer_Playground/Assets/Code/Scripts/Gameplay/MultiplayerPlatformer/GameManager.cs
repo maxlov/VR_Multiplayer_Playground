@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
         playerParent.position = spawn;
         player.position = spawn;
+        Debug.Log($"Spawning player for team {team}");
     }
 
     public void EndGame()

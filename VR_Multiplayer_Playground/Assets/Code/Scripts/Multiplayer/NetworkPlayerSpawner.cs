@@ -27,7 +27,8 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        JoinTeam(startTeam);
+        if (!PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Team"))
+            JoinTeam(startTeam);
     }
 
     public void CreatePlayer()
@@ -65,6 +66,8 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     /// <param name="team">Team to join. 0 = spectator, 1 = red, 2 = blue</param>
     public void JoinTeam(int team)
     {
+        Debug.Log($"Attempting to join team {team}");
+
         if (0 > team || team > 2)
         {
             Debug.Log("Out of range team, setting to spectator (0)");
@@ -74,11 +77,13 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         if (PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Team"))
         {
             PhotonNetwork.LocalPlayer.CustomProperties["Team"] = team;
+            Debug.Log($"Changed property team to {team}");
         }
         else
         {
             ExitGames.Client.Photon.Hashtable playerProps = new ExitGames.Client.Photon.Hashtable { { "Team", team } };
             PhotonNetwork.SetPlayerCustomProperties(playerProps);
+            Debug.Log($"Created new property and added player");
         }
         TeamJoinEvent.Invoke();
     }
