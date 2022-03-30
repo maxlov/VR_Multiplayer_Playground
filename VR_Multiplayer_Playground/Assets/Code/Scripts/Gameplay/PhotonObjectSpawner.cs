@@ -12,6 +12,9 @@ public class PhotonObjectSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
         lastSpawned = PhotonNetwork.Instantiate(prefabName, spawnPoint.position, Quaternion.identity);
     }
 }
