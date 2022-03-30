@@ -783,6 +783,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  StartGameEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &172958916
 Transform:
   m_ObjectHideFlags: 0
@@ -809,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ad0931ad4ff34409e3de5a05c7ddf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpawn: {x: 0, y: 0, z: 0}
+  startTeam: 0
   TeamJoinEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1995,6 +1998,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1571032033}
     m_Modifications:
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 172958917}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: JoinTeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NetworkPlayerSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2243739109009102314, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 1.6172544
@@ -2270,6 +2305,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1571032033}
     m_Modifications:
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 172958917}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: JoinTeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NetworkPlayerSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 165773600528762570, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2243739109009102314, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 1.6172544
