@@ -14,7 +14,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public int currectScene;
     public int gameScene;
 
-    [SerializeField] private UnityEvent SpawnPlayerEvent;
+    [SerializeField] private UnityEvent NetworkSpawnPlayerEvent;
     [SerializeField] private UnityEvent StartGameEvent;
 
     private void Awake()
@@ -72,7 +72,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Joined a Room");
         base.OnJoinedRoom();
-        SpawnPlayerEvent.Invoke();
+        NetworkSpawnPlayerEvent.Invoke();
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -87,7 +87,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (currectScene == gameScene)
         {
             Debug.Log("Starting game");
-            SpawnPlayerEvent.Invoke();
             StartGameEvent.Invoke();
         }
     }

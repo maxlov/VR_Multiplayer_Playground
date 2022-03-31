@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 412491024009552846}
   m_Layer: 10
   m_Name: Right Hand Physics
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 412491024360119892}
   m_Layer: 9
   m_Name: Left Hand Physics
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
