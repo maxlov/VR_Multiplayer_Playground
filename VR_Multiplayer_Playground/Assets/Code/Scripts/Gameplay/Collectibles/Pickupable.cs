@@ -6,17 +6,24 @@ using Photon.Pun;
 public class Pickupable : MonoBehaviour
 {
     [SerializeField] private PickupEffect effect;
-    [SerializeField] private UnityEvent pickupEvent;
+    public UnityEvent pickupEvent;
 
     private PhotonView photonView;
 
+    public bool used = false;
+
+    private void Start()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("Player"))
+        if (used)
             return;
-    
-        effect.Apply();
+        used = true;
 
+        effect.Apply();
         pickupEvent.Invoke();
         photonView.RPC("RPC_DestroySelf", RpcTarget.MasterClient);
     }

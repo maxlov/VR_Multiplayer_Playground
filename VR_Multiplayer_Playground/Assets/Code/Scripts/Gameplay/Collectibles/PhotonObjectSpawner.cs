@@ -2,31 +2,22 @@ using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PhotonObjectSpawner : MonoBehaviour
 {
     [SerializeField] string prefabName;
 
     [SerializeField] private Transform spawnPoint;
-
     [SerializeField] private bool spawnOnStart;
-    [SerializeField] private bool oneShot;
+    [SerializeField] private UnityEvent onPickedUp;
 
     private GameObject lastSpawned;
+    private Pickupable pickupable;
 
     private void Start()
     {
         if (spawnOnStart)
-            SpawnObject();
-    }
-
-    private void Update()
-    {
-        // Having a check every update is far from ideal but without this
-        // it is difficult to tell when the last object is destroyed.
-        // Perhaps I can add on some script to the object that raises some sort of event?
-
-        if (oneShot && lastSpawned == null)
             SpawnObject();
     }
 
@@ -36,5 +27,13 @@ public class PhotonObjectSpawner : MonoBehaviour
             return;
 
         lastSpawned = PhotonNetwork.Instantiate(prefabName, spawnPoint.position, Quaternion.identity);
+        if (lastSpawned.TryGetComponent<Pickupable>(out pickupable))
+            pickupable.pickupEvent.AddListener(OnObjectPickup);
+    }
+
+    private void OnObjectPickup()
+    {
+        pickupable.pickupEvent.RemoveListener(OnObjectPickup);
+        onPickedUp.Invoke();
     }
 }

@@ -1324,7 +1324,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-92810
+  m_Name: pb_Mesh-8914
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1849,6 +1849,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715032876}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &784914106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3690585132980102946, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+  m_PrefabInstance: {fileID: 1481058633265479139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af4419bc3aca93489e1dceed6c74a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &861298462
 GameObject:
   m_ObjectHideFlags: 0
@@ -4481,9 +4492,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2719608837025658247, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+      propertyPath: spawnOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719608837025658247, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719608837025658247, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719608837025658247, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784914106}
+    - target: {fileID: 2719608837025658247, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719608837025658247, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719608837025658247, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Timer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719608837025658247, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3690585132980102946, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
       propertyPath: isTicking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7226518244223101206, guid: 6b1a998e03b7061408fdea4996adbd77, type: 3}
       propertyPath: m_Name
@@ -4819,15 +4862,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8708967915385724602, guid: 9739442c955207241a4cd7e525bac0d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.2
+      value: -2.79
       objectReference: {fileID: 0}
     - target: {fileID: 8708967915385724602, guid: 9739442c955207241a4cd7e525bac0d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.13
+      value: 14.7
       objectReference: {fileID: 0}
     - target: {fileID: 8708967915385724602, guid: 9739442c955207241a4cd7e525bac0d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.95
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 8708967915385724602, guid: 9739442c955207241a4cd7e525bac0d9, type: 3}
       propertyPath: m_LocalRotation.w
