@@ -24,6 +24,7 @@ public class PhysicsButton : MonoBehaviour
     {
         if (!_isPressed && GetValue() + threshold >= 1)
         {
+            Debug.Log("Is Pressed.");
             Pressed();
         }
         if (_isPressed && GetValue() - threshold <= 0)

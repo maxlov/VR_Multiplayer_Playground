@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 8006143295909057762}
   - component: {fileID: 8006143295909057763}
   - component: {fileID: 8006143295909057769}
-  - component: {fileID: 8006143295909057760}
   m_Layer: 6
   m_Name: PickupSphere
   m_TagString: Untagged
@@ -270,15 +269,3 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &8006143295909057760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8006143295909057771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c792e7b9f066acf4db02a0bb4221817a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

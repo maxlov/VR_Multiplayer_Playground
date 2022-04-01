@@ -12,6 +12,7 @@ public class TextUpdater : MonoBehaviour
     private string currentText;
 
     public bool useFloat;
+    public bool level;
 
     private void Start()
     {
@@ -29,5 +30,18 @@ public class TextUpdater : MonoBehaviour
         if (useFloat && input != null)
             currentText = input.Value.ToString();
         textUI.text = currentText;
+    }
+    public void UpdateUpgradeText()
+    {
+        if (input != null)
+        {
+            if (level)
+                currentText = "Level - " + input.Value.ToString();
+            else
+            {
+                currentText = "Cost - " + input.Value.ToString();
+            }
+            textUI.text = currentText;
+        }
     }
 }
