@@ -280,3 +280,4 @@ MonoBehaviour:
   pickupEvent:
     m_PersistentCalls:
       m_Calls: []
+  used: 0

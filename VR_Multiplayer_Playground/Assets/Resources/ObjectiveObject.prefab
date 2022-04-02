@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 4652276152804522411}
   - component: {fileID: 4652276152804522420}
   m_Layer: 6
-  m_Name: PickupCube
-  m_TagString: Untagged
+  m_Name: ObjectiveObject
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
