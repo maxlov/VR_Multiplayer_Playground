@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7736472753834527823, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
       propertyPath: alternateTimer
-      value: 15
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
       propertyPath: oneShot
@@ -85,7 +85,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
       propertyPath: spawnOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3690585132980102946}
+    - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Timer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067736926567210730, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+      propertyPath: onPickedUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+--- !u!114 &3690585132980102946 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7736472753834527823, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
+  m_PrefabInstance: {fileID: 6371167840381594477}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af4419bc3aca93489e1dceed6c74a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
