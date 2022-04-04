@@ -51,7 +51,10 @@ public class HandPhysics : MonoBehaviour
         rotationDifference.ToAngleAxis(out float angleInDegrees, out Vector3 rotationAxis);
         if (angleInDegrees > 180)
             angleInDegrees -= 360;
-        Vector3 rotationDifferenceInDegrees = angleInDegrees * rotationAxis;
-        _rb.angularVelocity = (rotationDifferenceInDegrees * Mathf.Deg2Rad / Time.fixedDeltaTime);
+        if (Mathf.Abs(rotationAxis.sqrMagnitude) != Mathf.Infinity)
+		{
+            Vector3 rotationDifferenceInDegrees = angleInDegrees * rotationAxis;
+            _rb.angularVelocity = (rotationDifferenceInDegrees * Mathf.Deg2Rad / Time.fixedDeltaTime);
+        }
     }
 }
