@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 412491024324666941}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AttachmentPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 412491024436560162}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AttachmentPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 412491024635542842}
   - component: {fileID: 412491024635542841}
   - component: {fileID: 412491024635542840}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Out of Bounds Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 412491024859708983}
   - component: {fileID: 412491024859708985}
   - component: {fileID: 412491024859708984}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Out of Bounds Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6020,7 +6020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3727305518687082507}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6057,7 +6057,7 @@ GameObject:
   - component: {fileID: 3727305519124682262}
   - component: {fileID: 3727305519124682263}
   - component: {fileID: 3727305519124682256}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -6247,7 +6247,7 @@ GameObject:
   - component: {fileID: 3727305519472012762}
   - component: {fileID: 3727305519472012760}
   - component: {fileID: 3727305519472012761}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RightHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6590,7 +6590,7 @@ GameObject:
   - component: {fileID: 3727305520159418801}
   - component: {fileID: 3727305520159418806}
   - component: {fileID: 7591799139251201876}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: XR Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6716,7 +6716,7 @@ GameObject:
   - component: {fileID: 3727305520351110502}
   - component: {fileID: 3727305520351110500}
   - component: {fileID: 3727305520351110501}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
