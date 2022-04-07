@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SpawnObject : MonoBehaviour
+public class RespawnObject : MonoBehaviour
 {
     [SerializeField] private GameObject spawnedObject;
     [SerializeField] private FloatVariable score;
