@@ -49,7 +49,12 @@ public class HandPhysics : MonoBehaviour
 
         Quaternion rotationDifference = target.rotation * Quaternion.Inverse(transform.rotation);
         rotationDifference.ToAngleAxis(out float angleInDegrees, out Vector3 rotationAxis);
-        Vector3 rotationDifferenceInDegrees = angleInDegrees * rotationAxis;
-        _rb.angularVelocity = (rotationDifferenceInDegrees * Mathf.Deg2Rad / Time.fixedDeltaTime);
+        if (angleInDegrees > 180)
+            angleInDegrees -= 360;
+        if (Mathf.Abs(rotationAxis.sqrMagnitude) != Mathf.Infinity)
+		{
+            Vector3 rotationDifferenceInDegrees = angleInDegrees * rotationAxis;
+            _rb.angularVelocity = (rotationDifferenceInDegrees * Mathf.Deg2Rad / Time.fixedDeltaTime);
+        }
     }
 }

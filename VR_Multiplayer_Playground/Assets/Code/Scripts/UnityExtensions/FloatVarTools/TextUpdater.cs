@@ -11,8 +11,9 @@ public class TextUpdater : MonoBehaviour
     public string text = "";
     private string currentText;
 
+    public bool continuousUpdate = true;
     public bool useFloat;
-    public bool level;
+    public string floatToStringParams;
 
     private void Start()
     {
@@ -21,6 +22,8 @@ public class TextUpdater : MonoBehaviour
 
     void Update()
     {
+        if (!continuousUpdate)
+            return;
         UpdateText();
     }
 
@@ -28,7 +31,7 @@ public class TextUpdater : MonoBehaviour
     {
         currentText = text;
         if (useFloat && input != null)
-            currentText = input.Value.ToString();
+            currentText = input.Value.ToString(floatToStringParams);
         textUI.text = currentText;
     }
     public void UpdateUpgradeText()
