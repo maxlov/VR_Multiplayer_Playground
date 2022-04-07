@@ -1,30 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RespawnObject : MonoBehaviour
 {
-	private Vector3 spawnPosition;
-	private Quaternion spawnRotation;
+    [SerializeField] private GameObject spawnedObject;
+    [SerializeField] private FloatVariable score;
+    [SerializeField] private UnityEvent ScoreUpdateEvent;
+    [SerializeField] Transform parent;
 
-	private void Start()
-	{
-		spawnPosition = transform.position;
-		spawnRotation = transform.rotation;
-	}
+    public void Spawn()
+    {
+        int spawnCost = 5;
 
-	private void OnTriggerEnter(Collider other)
-	{
-		if (other.CompareTag("Respawn"))
-		{
-			Respawn();
-		}
-	}
+        if (spawnCost > score.Value)
+            return;
 
-	public void Respawn()
-	{
-		gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-		transform.position = spawnPosition;
-		transform.rotation = spawnRotation;
-	}
+        //Score Stuff
+        score.SetValue(score.Value -= spawnCost);
+        Debug.Log($"{score.Value}");
+        ScoreUpdateEvent.Invoke();
+
+        GameObject.Instantiate(spawnedObject, parent.position, Quaternion.identity);
+        Debug.Log("Spawned Object");
+    }
 }

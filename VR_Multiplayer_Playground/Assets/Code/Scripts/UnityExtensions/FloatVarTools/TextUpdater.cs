@@ -34,4 +34,17 @@ public class TextUpdater : MonoBehaviour
             currentText = input.Value.ToString(floatToStringParams);
         textUI.text = currentText;
     }
+    public void UpdateUpgradeText()
+    {
+        if (input != null)
+        {
+            if (level)
+                currentText = "Level - " + input.Value.ToString();
+            else
+            {
+                currentText = "Cost - " + input.Value.ToString();
+            }
+            textUI.text = currentText;
+        }
+    }
 }
