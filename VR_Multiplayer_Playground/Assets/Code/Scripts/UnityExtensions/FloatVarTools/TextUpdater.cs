@@ -14,6 +14,7 @@ public class TextUpdater : MonoBehaviour
 
     public bool continuousUpdate = true;
     public bool useFloat;
+    public bool level;
     public string floatToStringParams;
 
     private void Start()
