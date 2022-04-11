@@ -11,5 +11,6 @@ public class ScoreOrbEffect : PickupEffect
     public override void Apply()
     {
         score.Value += amount.Value;
+        scoreOrbEvent.Invoke();
     }
 }

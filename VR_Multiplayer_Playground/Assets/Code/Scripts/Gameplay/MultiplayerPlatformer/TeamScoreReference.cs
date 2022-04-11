@@ -12,11 +12,7 @@ public class TeamScoreReference : DescriptionBaseSO
     public float Value
     {
         get { return TeamScore().Value; }
-        set 
-        {
-            updateScores.Invoke();
-            TeamScore().SetValue(value);
-        }
+        set { TeamScore().SetValue(value); }
     }
 
     private FloatVariable TeamScore()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using Photon.Pun;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Timer))]
@@ -28,6 +29,9 @@ public class ObjectiveZone : MonoBehaviour
 
     public void UpdateTeamScore()
     {
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
         ResetObj();
         teamScore.ApplyChange(pointsOnScore.Value);
         updateTeamScoreEvent.Invoke();

@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: TeamScoreReference
   m_EditorClassIdentifier: 
   description: 
-  redTeamScore: {fileID: 0}
-  blueTeamScore: {fileID: 0}
+  redTeamScore: {fileID: 11400000, guid: 6c184fe440dc7454dae8766e6b2a5b56, type: 2}
+  blueTeamScore: {fileID: 11400000, guid: 85d4c3292a09c8b4197b53162b7c8fc6, type: 2}
+  updateScores:
+    m_PersistentCalls:
+      m_Calls: []
