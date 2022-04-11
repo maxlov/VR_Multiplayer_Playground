@@ -46,4 +46,10 @@ public class Timer : MonoBehaviour
         timer.SetValue(timer.defaultValue);
         isTicking = true;
     }
+
+    public void StopTimer()
+    {
+        isTicking = false;
+        timer.SetValue(timer.defaultValue);
+    }
 }

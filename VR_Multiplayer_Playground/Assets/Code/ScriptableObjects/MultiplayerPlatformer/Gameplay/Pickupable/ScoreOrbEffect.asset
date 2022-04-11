@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090a327102790874e87cde3f59975b3e, type: 3}
   m_Name: ScoreOrbEffect
   m_EditorClassIdentifier: 
-  score: {fileID: 11400000, guid: 310e51ee2c8e63843828ad748ad3fcd8, type: 2}
+  score: {fileID: 11400000, guid: dc477d8e7c514d94aa51eaca69353903, type: 2}
   amount:
     UseConstant: 1
-    ConstantValue: 10
+    ConstantValue: 5
     Variable: {fileID: 0}
   scoreOrbEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: d5887c7d34f20874f8ec4ca0406ee7a5, type: 2}
+      - m_Target: {fileID: 11400000, guid: 6f31bcd2d363fb641b4532c53f88397e, type: 2}
         m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
         m_MethodName: Raise
         m_Mode: 1
