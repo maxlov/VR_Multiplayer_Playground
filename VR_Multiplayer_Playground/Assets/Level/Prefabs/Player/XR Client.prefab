@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 412491024009552845}
   - component: {fileID: 412491024009552847}
   - component: {fileID: 412491024009552846}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Right Hand Physics
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 412491024335177065}
   - component: {fileID: 412491024335177064}
   - component: {fileID: 412491024335177063}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 412491024360119891}
   - component: {fileID: 412491024360119893}
   - component: {fileID: 412491024360119892}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Left Hand Physics
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 412491024869640223}
   - component: {fileID: 412491024869640222}
   - component: {fileID: 412491024869640192}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21946,6 +21946,8 @@ GameObject:
   - component: {fileID: 3220517874953542889}
   - component: {fileID: 1971165772913043345}
   - component: {fileID: 6506087139554082096}
+  - component: {fileID: 1025091457}
+  - component: {fileID: 1025091458}
   m_Layer: 7
   m_Name: Avatar1
   m_TagString: Untagged
@@ -22117,6 +22119,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 8521429710566327632}
+--- !u!114 &1025091457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577088358146133072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd41b8fd24c66e44841d94414b93580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 40c789075e689be42925bd224895e700, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1025091458}
+        m_TargetAssemblyTypeName: PlayerMaterialSetter, Assembly-CSharp
+        m_MethodName: SetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1025091458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577088358146133072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6d24d4151427242b8fa88f78c000af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamColors:
+  - {fileID: 2100000, guid: c10513529dceed642867634d03549c78, type: 2}
+  - {fileID: 2100000, guid: 04924c17ae5a503419b03fd77d2d637c, type: 2}
+  - {fileID: 2100000, guid: e6ccacde1b8c92e48889abaee7da8c0e, type: 2}
+  playerMesh: {fileID: 6270447618153753683}
 --- !u!1 &5674779637557100117
 GameObject:
   m_ObjectHideFlags: 0
