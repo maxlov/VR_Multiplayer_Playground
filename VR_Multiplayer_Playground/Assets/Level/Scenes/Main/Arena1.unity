@@ -5403,6 +5403,10 @@ PrefabInstance:
       value: Network Manager
       objectReference: {fileID: 0}
     - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: roomIndex
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
       propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}

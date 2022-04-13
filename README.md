@@ -20,3 +20,11 @@ The current gameplay flow looks like this:
 - At the end of the game, the team with the most points wins!
 
 We plan on adding ways for players to defend their base, so they can maximize the objective pieces captured. Players will be able to spend their team’s score to purchase traps, projectiles, and more to be able slow down their opponents.
+
+ATTRIBUTIONS:
+
+•••••••••••• Music By •••••••••••••
+"80s' Era''
+Jay Man - OurMusicBox
+https://www.our-music-box.com
+https://www.youtube.com/c/ourmusicbox
