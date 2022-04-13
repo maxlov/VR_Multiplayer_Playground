@@ -14,7 +14,7 @@ public class TextUpdater : MonoBehaviour
 
     public bool continuousUpdate = true;
     public bool useFloat;
-    public bool level;
+    public bool textAfter = false;
     public string floatToStringParams;
 
     private void Start()
@@ -31,22 +31,18 @@ public class TextUpdater : MonoBehaviour
 
     public void UpdateText()
     {
-        currentText = text;
         if (useFloat && input != null)
-            currentText = input.Value.ToString(floatToStringParams);
-        textUI.text = currentText;
-    }
-    public void UpdateUpgradeText()
-    {
-        if (input != null)
         {
-            if (level)
-                currentText = "Level - " + input.Value.ToString();
+            if (!textAfter)
+            {
+                currentText = text;
+                currentText += input.Value.ToString(floatToStringParams);
+            }
             else
             {
-                currentText = "Cost - " + input.Value.ToString();
+                currentText = input.Value.ToString(floatToStringParams) + text;
             }
-            textUI.text = currentText;
         }
+        textUI.text = currentText;
     }
 }
