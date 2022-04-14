@@ -7,7 +7,7 @@ using Unity.XR.CoreUtils;
 
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
-    private GameObject player;
+    [HideInInspector] public GameObject player;
 
     private Vector3 initialSpawn;
 
@@ -46,8 +46,10 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         clientLeftHandTracker = origin.transform.Find("Camera Offset/LeftHand Controller");
         clientRightHandTracker = origin.transform.Find("Camera Offset/RightHand Controller");
 
-        player = PhotonNetwork.Instantiate("Network Player 2", initialSpawn, Quaternion.identity);
-        NetworkPlayer networkPlayer = player.GetComponent<NetworkPlayer>();
+        var newPlayer = PhotonNetwork.Instantiate("Network Player 2", initialSpawn, Quaternion.identity);
+        if (newPlayer.GetComponent<PhotonView>().IsMine)
+            player = newPlayer;
+        NetworkPlayer networkPlayer = newPlayer.GetComponent<NetworkPlayer>();
         networkPlayer.headOrigin = clientHeadTracker;
         networkPlayer.leftHandOrigin = clientLeftHandTracker;
         networkPlayer.rightHandOrigin = clientRightHandTracker;
