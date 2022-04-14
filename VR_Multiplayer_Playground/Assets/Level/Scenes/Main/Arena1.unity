@@ -3509,15 +3509,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1129438583000749737, guid: cd2659ea2dd984d47873ada5161e50a5, type: 3}
   m_PrefabInstance: {fileID: 1381958659}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1418519790 stripped
+--- !u!114 &1418519791 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3727305520452892915, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3727305520452892914, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
   m_PrefabInstance: {fileID: 1025091454}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1422863122
@@ -5943,7 +5943,7 @@ PrefabInstance:
     - target: {fileID: 289305292, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: playerDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1418519790}
+      objectReference: {fileID: 1418519791}
     - target: {fileID: 289305292, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: respawnPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
@@ -5975,7 +5975,7 @@ PrefabInstance:
     - target: {fileID: 289305292, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: respawnPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1418519790}
+      objectReference: {fileID: 1418519791}
     - target: {fileID: 289305292, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: playerDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
