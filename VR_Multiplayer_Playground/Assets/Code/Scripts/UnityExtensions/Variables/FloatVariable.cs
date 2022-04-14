@@ -8,8 +8,10 @@ public class FloatVariable : ScriptableObject
     public string DeveloperDescription = "";
 #endif
 
+    [Header("Initial Value")]
     public float defaultValue;
 
+    [Header("Current Value")]
     [SerializeField]
     private float _value;
 
