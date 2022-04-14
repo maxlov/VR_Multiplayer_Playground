@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dbb696cce0fa2c4ba778f9d4b27d24f, type: 3}
-  m_Name: SFXCollectBading
+  m_Name: SFX_Collect_Bading
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: ff1f418a41094ce4ea02d8e823f74e70, type: 3}

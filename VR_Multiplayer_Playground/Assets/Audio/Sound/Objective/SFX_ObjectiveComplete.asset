@@ -10,18 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dbb696cce0fa2c4ba778f9d4b27d24f, type: 3}
-  m_Name: SFX_Pop
+  m_Name: SFX_ObjectiveComplete
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 7222cd95e50d611408652ad7706c3488, type: 3}
-  - {fileID: 8300000, guid: 8baea8815eefe8f449eb5feb03b27e10, type: 3}
-  - {fileID: 8300000, guid: f47e3f7effe377e4e8bdaf53b07f0e4f, type: 3}
-  - {fileID: 8300000, guid: b887abc81cde81c45a233bfe52b1d5ab, type: 3}
-  - {fileID: 8300000, guid: c5c1e3eaf98aec341b9801d2f19c34d9, type: 3}
-  - {fileID: 8300000, guid: 2a8f3e132fd0dd742b8004f2ce268444, type: 3}
+  - {fileID: 8300000, guid: b19261fd93c01f14db28cb5af649f5c5, type: 3}
   volume: {x: 0.5, y: 0.5}
   pitch: {x: 1, y: 1}
   spatialBlend: 1
   audioMixerGroup: {fileID: -529002028008718470, guid: bfa6165f95d087242af12b6a7d1a8467, type: 2}
   playOrder: 0
-  playIndex: 5
+  playIndex: 0
