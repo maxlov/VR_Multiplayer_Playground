@@ -23,7 +23,7 @@ TagManager:
   - OutOfBoundsHandRenderLayer
   - XRPlayer
   - PostProcessing
-  - 
+  - PlayerHitBox
   - 
   - 
   - 

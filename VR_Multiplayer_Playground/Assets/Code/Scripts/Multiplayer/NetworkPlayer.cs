@@ -1,8 +1,9 @@
 using UnityEngine;
-using UnityEngine.XR;
+using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using Unity.XR.CoreUtils;
 using Photon.Pun;
+using UnityEngine.Events;
 
 public class NetworkPlayer : MonoBehaviour
 {
@@ -18,7 +19,13 @@ public class NetworkPlayer : MonoBehaviour
     [HideInInspector] public Transform rightHandOrigin;
 
     [Space(10)]
-    public SkinnedMeshRenderer mesh;
+    [SerializeField] private SkinnedMeshRenderer mesh;
+    [SerializeField] private GameObject beltParticles;
+    [SerializeField] private Slider healthBar;
+
+    public UnityEvent onTakeDamage;
+    public UnityEvent onDeath;
+    public UnityEvent onRespawn;
 
     private void Start()
     {
@@ -40,5 +47,50 @@ public class NetworkPlayer : MonoBehaviour
     void MapPosition(Transform target, Transform originTransform)
     {        
         target.SetPositionAndRotation(originTransform.position, originTransform.rotation);
+    }
+
+    public void NetworkPlayerTakeDamage(int newHealthTotal)
+    {
+        photonView.RPC("TakeDamage", RpcTarget.All, newHealthTotal);
+    }
+
+    [PunRPC]
+    void TakeDamage(int newHealthTotal)
+    {
+        onTakeDamage.Invoke();
+        healthBar.value = newHealthTotal;
+    }
+
+    public void NetworkPlayerDeath()
+	{
+        photonView.RPC("Death", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void Death()
+	{
+        onDeath.Invoke();
+        if (!photonView.IsMine)
+		{
+            mesh.gameObject.SetActive(false);
+            beltParticles.SetActive(false);
+        }     
+    }
+
+    public void NetworkPlayerRespawn()
+    {
+        photonView.RPC("Respawn", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void Respawn()
+    {
+        onRespawn.Invoke();
+        if (!photonView.IsMine)
+		{
+            mesh.gameObject.SetActive(true);
+            beltParticles.SetActive(true);
+        }
+        healthBar.value = 100;
     }
 }
