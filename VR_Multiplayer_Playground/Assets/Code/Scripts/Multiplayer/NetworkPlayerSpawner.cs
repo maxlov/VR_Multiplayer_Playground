@@ -76,17 +76,10 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
             team = 0;
         }
 
-        if (PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Team"))
-        {
-            PhotonNetwork.LocalPlayer.CustomProperties["Team"] = team;
-            Debug.Log($"Changed property team to {team}");
-        }
-        else
-        {
-            ExitGames.Client.Photon.Hashtable playerProps = new ExitGames.Client.Photon.Hashtable { { "Team", team } };
-            PhotonNetwork.SetPlayerCustomProperties(playerProps);
-            Debug.Log($"Created new property and added player");
-        }
+        var hash = PhotonNetwork.LocalPlayer.CustomProperties;
+        hash["Team"] = team;
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+        Debug.Log($"Player joined team {PhotonNetwork.LocalPlayer.CustomProperties["Team"]}");
         TeamJoinEvent.Invoke();
     }
 }
