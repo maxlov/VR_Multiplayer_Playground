@@ -11,7 +11,7 @@ public class HealthManager : MonoBehaviour
 
     [SerializeField] private float respawnTime;
 
-    // need refrence to network player's health bar
+    [SerializeField] private NetworkPlayerSpawner playerSpawnerScript;
 
     [SerializeField] private UnityEvent playerDeath;
     [SerializeField] private UnityEvent respawnPlayer;

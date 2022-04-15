@@ -45,6 +45,9 @@ MonoBehaviour:
   - RPC_StartGame
   - RPC_DestroySelf
   - RPC_UpdateScores
+  - Death
+  - Respawn
+  - TakeDamage
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
