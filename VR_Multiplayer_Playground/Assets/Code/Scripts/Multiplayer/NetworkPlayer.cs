@@ -49,13 +49,13 @@ public class NetworkPlayer : MonoBehaviour
         target.SetPositionAndRotation(originTransform.position, originTransform.rotation);
     }
 
-    public void NetworkPlayerTakeDamage(int newHealthTotal)
+    public void NetworkPlayerTakeDamage(float newHealthTotal)
     {
         photonView.RPC("TakeDamage", RpcTarget.All, newHealthTotal);
     }
 
     [PunRPC]
-    void TakeDamage(int newHealthTotal)
+    void TakeDamage(float newHealthTotal)
     {
         onTakeDamage.Invoke();
         healthBar.value = newHealthTotal;

@@ -28,8 +28,11 @@ public class HealthManager : MonoBehaviour
 	{
         health.Value = 100;
         playerHealthBar.value = health.defaultValue;
-        // send update to network player healthbar display
         _canDie = true;
+        if (playerSpawnerScript.player != null)
+		{
+            playerSpawnerScript.player.GetComponent<NetworkPlayer>().NetworkPlayerRespawn();
+        }  
     }
 
     public void TakeDamage(int damage)
@@ -45,13 +48,19 @@ public class HealthManager : MonoBehaviour
             }
 		}
         playerHealthBar.value = health.Value;
-        // send update to network player healthbar display
+        if (playerSpawnerScript.player != null)
+        {
+            playerSpawnerScript.player.GetComponent<NetworkPlayer>().NetworkPlayerTakeDamage(health.Value);
+        }
     }
 
     public void Death()
 	{
         playerDeath.Invoke();
-        // make the network player disapear with the particles and sounds
+        if (playerSpawnerScript.player != null)
+        {
+            playerSpawnerScript.player.GetComponent<NetworkPlayer>().NetworkPlayerDeath();
+        }
         StartCoroutine(RespawnTimer(respawnTime));
     }
 
