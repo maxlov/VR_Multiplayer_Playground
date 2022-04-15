@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.33612195, g: 0.5188679, b: 0.4508694, a: 1}
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1.2
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 20f6d22d93779de4ea6f62f8ab305593, type: 2}
   m_HaloStrength: 0.5
@@ -4442,13 +4442,8 @@ MonoBehaviour:
   continuousUpdate: 1
   useFloat: 1
   level: 0
-  floatToStringParams: 
---- !u!4 &501870988 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3727305520159418805, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
-  m_PrefabInstance: {fileID: 1025091454}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &522590412
+  floatToStringParams: F2
+--- !u!1001 &1025091454
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5931,22 +5926,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8254486289781148537, guid: 40eb2e01646a4cb42847c14e14c3f154, type: 3}
   m_PrefabInstance: {fileID: 1498056703}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201048425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cd4b5a92ddd7114f841365fd4c52f29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 85d4c3292a09c8b4197b53162b7c8fc6, type: 2}
-  text: 
-  continuousUpdate: 1
-  useFloat: 1
-  level: 0
-  floatToStringParams: 
---- !u!1 &1233295343
+--- !u!1 &1515226046
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9603,16 +9583,80 @@ PrefabInstance:
       value: Network Manager
       objectReference: {fileID: 0}
     - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
-      propertyPath: roomIndex
-      value: 55
+      propertyPath: gameScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: currectScene
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: StartGameEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: StartGameEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: StartGameEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: d510675cdfec29e47b9f161e9825c8bf, type: 2}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: StartGameEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 6476136beebe96449b86077c60fb8ab4, type: 2}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: StartGameEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: StartGameEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
       propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: d510675cdfec29e47b9f161e9825c8bf, type: 2}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
       propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: StartGameEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: StartGameEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
+      propertyPath: NetworkSpawnPlayerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8802659a4104a6548815278e19987223, type: 3}
