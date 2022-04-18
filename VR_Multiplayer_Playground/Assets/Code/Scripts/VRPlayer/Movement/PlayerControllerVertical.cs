@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerControllerVertical : MonoBehaviour
@@ -21,6 +20,8 @@ public class PlayerControllerVertical : MonoBehaviour
     private bool isJumping = false;
 
     [SerializeField] private InputActionReference jumpActionReference;
+
+    [SerializeField] private UnityEvent OnJump;
 
     void Start()
     {
@@ -76,6 +77,7 @@ public class PlayerControllerVertical : MonoBehaviour
         if (!isJumping && characterController.isGrounded && jumpActionReference.action.IsPressed())
         {
             isJumping = true;
+            OnJump.Invoke();
             currentYVelocity = appliedYVelocity = initialJumpVelocity;
         } else if (!jumpActionReference.action.IsPressed() && isJumping && characterController.isGrounded)
         {
