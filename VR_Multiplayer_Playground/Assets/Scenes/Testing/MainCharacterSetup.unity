@@ -687,6 +687,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upgrade Station
       objectReference: {fileID: 0}
+    - target: {fileID: 5813625646034654480, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.000000017281943
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813625646034654480, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.00000007247378
+      objectReference: {fileID: 0}
     - target: {fileID: 8294314288245812101, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_RootOrder
       value: 17
