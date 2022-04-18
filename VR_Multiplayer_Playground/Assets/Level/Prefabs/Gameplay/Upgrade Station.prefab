@@ -122,6 +122,8 @@ GameObject:
   - component: {fileID: 2471574917938967196}
   - component: {fileID: 6646407428115786154}
   - component: {fileID: 4445427041532756463}
+  - component: {fileID: 3091308487723568932}
+  - component: {fileID: 5740570918420403553}
   m_Layer: 5
   m_Name: Upgrade Points Cost Text (1)
   m_TagString: Untagged
@@ -245,6 +247,55 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3091308487723568932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6525630103295293458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd41b8fd24c66e44841d94414b93580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d5887c7d34f20874f8ec4ca0406ee7a5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5740570918420403553}
+        m_TargetAssemblyTypeName: TextUpdater, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5740570918420403553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6525630103295293458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd4b5a92ddd7114f841365fd4c52f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 35cf9c054e8fc504392137c9d504235e, type: 2}
+  text: ' pts'
+  continuousUpdate: 1
+  useFloat: 1
+  textAfter: 1
+  floatToStringParams: 
 --- !u!1 &6898885053381441411
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +611,8 @@ GameObject:
   - component: {fileID: 7492076235533354131}
   - component: {fileID: 7492076235533354133}
   - component: {fileID: 7492076235533354130}
+  - component: {fileID: 7106123099607599822}
+  - component: {fileID: 8024356740928897602}
   m_Layer: 5
   m_Name: Upgrade Points Cost Text
   m_TagString: Untagged
@@ -683,6 +736,55 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7106123099607599822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492076235533354128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd41b8fd24c66e44841d94414b93580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d5887c7d34f20874f8ec4ca0406ee7a5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8024356740928897602}
+        m_TargetAssemblyTypeName: TextUpdater, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8024356740928897602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492076235533354128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd4b5a92ddd7114f841365fd4c52f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: e5855ad913605d243853e513037c32dd, type: 2}
+  text: ' pts'
+  continuousUpdate: 1
+  useFloat: 1
+  textAfter: 1
+  floatToStringParams: 
 --- !u!1 &7492076235777502797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,13 +1655,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 766004366805917565}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FloatVariableMultiplier, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+--- !u!1 &7492076235486189288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7936340475237810874, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+  m_PrefabInstance: {fileID: 710082446977537106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6950051315459905157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7613672583135707863, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
   m_PrefabInstance: {fileID: 710082446977537106}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &766004366805917565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492076235486189288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29abd6df776902146960e56e66dac480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatVariables:
+  - {fileID: 11400000, guid: 817658bdd0fa35a4e861c95ad6784761, type: 2}
+  percentIncrease:
+    UseConstant: 1
+    ConstantValue: 0.01
+    Variable: {fileID: 0}
+  timePercentInc:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  score: {fileID: 11400000, guid: 310e51ee2c8e63843828ad748ad3fcd8, type: 2}
+  statLevel: {fileID: 11400000, guid: d8b301c3452bc1a4aabf1156400d0edd, type: 2}
+  statCost: {fileID: 11400000, guid: e5855ad913605d243853e513037c32dd, type: 2}
+  ScoreUpdateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d5887c7d34f20874f8ec4ca0406ee7a5, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &4507450272714708911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1615,10 +1790,84 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6573266792191716624}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FloatVariableMultiplier, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936340475237810872, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+--- !u!1 &5813625646034654485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7936340475237810874, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+  m_PrefabInstance: {fileID: 4507450272714708911}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6279316146659956088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7613672583135707863, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
   m_PrefabInstance: {fileID: 4507450272714708911}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6573266792191716624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5813625646034654485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29abd6df776902146960e56e66dac480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatVariables:
+  - {fileID: 11400000, guid: 7ccd9a27f80ac3a4f85696858d6e93fe, type: 2}
+  - {fileID: 11400000, guid: 090d93d4dc40bf24789b5b1d4df70094, type: 2}
+  percentIncrease:
+    UseConstant: 1
+    ConstantValue: 0.01
+    Variable: {fileID: 0}
+  timePercentInc:
+    UseConstant: 1
+    ConstantValue: 0.005
+    Variable: {fileID: 0}
+  score: {fileID: 11400000, guid: 310e51ee2c8e63843828ad748ad3fcd8, type: 2}
+  statLevel: {fileID: 11400000, guid: 731c84a9b17a71d4c85d77544d6a696a, type: 2}
+  statCost: {fileID: 11400000, guid: 35cf9c054e8fc504392137c9d504235e, type: 2}
+  ScoreUpdateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d5887c7d34f20874f8ec4ca0406ee7a5, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
