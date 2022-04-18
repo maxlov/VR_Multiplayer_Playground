@@ -8,7 +8,7 @@ public class FloatVariableMultiplier : MonoBehaviour
     [SerializeField] private FloatVariable[] floatVariables;
     [SerializeField] private FloatReference percentIncrease;
     [SerializeField] private FloatReference timePercentInc;
-    [SerializeField] private FloatVariable score;
+    [SerializeField] private TeamScoreReference teamScore;
     [SerializeField] private FloatVariable statLevel;
     [SerializeField] private FloatVariable statCost;
     [SerializeField] private UnityEvent ScoreUpdateEvent;
@@ -27,12 +27,12 @@ public class FloatVariableMultiplier : MonoBehaviour
 
     public void Upgrade()
     {
-        if (statCost.Value > score.Value)
+        if (statCost.Value > teamScore.Value)
             return;
 
         //Score Stuff
-        score.SetValue(score.Value -= statCost.Value);
-        Debug.Log($"{score.Value}");
+        teamScore.Value -= statCost.Value;
+        Debug.Log($"{teamScore.Value}");
         ScoreUpdateEvent.Invoke();
 
         //Change the Stat

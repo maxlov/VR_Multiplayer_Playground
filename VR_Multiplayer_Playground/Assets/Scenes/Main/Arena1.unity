@@ -4512,11 +4512,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7560889048270002554, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0017841111
+      value: 0.0017841114
       objectReference: {fileID: 0}
     - target: {fileID: 7560889048270002554, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.31252453
+      value: 0.31252462
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
@@ -7357,6 +7357,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.00000010012489
       objectReference: {fileID: 0}
+    - target: {fileID: 5813625646034654482, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7492076235486189293, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.00000011139423
@@ -7364,6 +7368,10 @@ PrefabInstance:
     - target: {fileID: 7492076235486189293, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.000000042452154
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492076235486189295, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8294314288245812101, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_RootOrder

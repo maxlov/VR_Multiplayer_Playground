@@ -1607,6 +1607,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8294314288245812101}
     m_Modifications:
+    - target: {fileID: 3764134531492513581, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: statLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: d8b301c3452bc1a4aabf1156400d0edd, type: 2}
+    - target: {fileID: 3764134531492513581, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: teamScore
+      value: 
+      objectReference: {fileID: 11400000, guid: dc477d8e7c514d94aa51eaca69353903, type: 2}
+    - target: {fileID: 3764134531492513581, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: floatVariables.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764134531492513581, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: floatVariables.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 817658bdd0fa35a4e861c95ad6784761, type: 2}
+    - target: {fileID: 3764134531492513581, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+      propertyPath: percentIncrease.ConstantValue
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 7125506378702985325, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
       propertyPath: m_Name
       value: KeyboardButton Speed
@@ -1683,7 +1703,8 @@ PrefabInstance:
       propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3764134531492513581, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
 --- !u!1 &7492076235486189288 stripped
 GameObject:
@@ -1717,7 +1738,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  score: {fileID: 11400000, guid: 310e51ee2c8e63843828ad748ad3fcd8, type: 2}
+  teamScore: {fileID: 11400000, guid: dc477d8e7c514d94aa51eaca69353903, type: 2}
   statLevel: {fileID: 11400000, guid: d8b301c3452bc1a4aabf1156400d0edd, type: 2}
   statCost: {fileID: 11400000, guid: e5855ad913605d243853e513037c32dd, type: 2}
   ScoreUpdateEvent:
@@ -1818,7 +1839,8 @@ PrefabInstance:
       propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3764134531492513581, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
 --- !u!1 &5813625646034654485 stripped
 GameObject:
@@ -1853,7 +1875,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0.005
     Variable: {fileID: 0}
-  score: {fileID: 11400000, guid: 310e51ee2c8e63843828ad748ad3fcd8, type: 2}
+  teamScore: {fileID: 11400000, guid: dc477d8e7c514d94aa51eaca69353903, type: 2}
   statLevel: {fileID: 11400000, guid: 731c84a9b17a71d4c85d77544d6a696a, type: 2}
   statCost: {fileID: 11400000, guid: 35cf9c054e8fc504392137c9d504235e, type: 2}
   ScoreUpdateEvent:

@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 7936340475237810878}
   - component: {fileID: 7936340475237810879}
   - component: {fileID: 7936340475237810872}
+  - component: {fileID: 3764134531492513581}
   m_Layer: 0
   m_Name: Push
   m_TagString: Untagged
@@ -271,7 +272,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
@@ -401,7 +402,46 @@ MonoBehaviour:
   deadZone: 0.025
   onPressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3764134531492513581}
+        m_TargetAssemblyTypeName: FloatVariableMultiplier, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onReleased:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3764134531492513581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936340475237810874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29abd6df776902146960e56e66dac480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatVariables: []
+  percentIncrease:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  timePercentInc:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  teamScore: {fileID: 0}
+  statLevel: {fileID: 0}
+  statCost: {fileID: 11400000, guid: e5855ad913605d243853e513037c32dd, type: 2}
+  ScoreUpdateEvent:
     m_PersistentCalls:
       m_Calls: []
