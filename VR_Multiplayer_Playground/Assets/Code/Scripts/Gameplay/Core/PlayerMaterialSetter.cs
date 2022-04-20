@@ -18,6 +18,8 @@ public class PlayerMaterialSetter : MonoBehaviour
         if (PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("Team"))
             team = (int)PhotonNetwork.LocalPlayer.CustomProperties["Team"];
 
-        playerMesh.material = teamColors[team];
+        Material[] mats = playerMesh.materials;
+        mats[1] = teamColors[team];
+        playerMesh.materials = mats;
     }
 }

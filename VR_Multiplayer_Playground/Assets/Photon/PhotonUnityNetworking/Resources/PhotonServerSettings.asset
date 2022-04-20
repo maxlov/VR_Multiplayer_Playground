@@ -49,6 +49,11 @@ MonoBehaviour:
   - Death
   - Respawn
   - TakeDamage
+  - RPC_NetworkPlay
+  - RPC_PlayDamageAudio
+  - RPC_PlayDeathAudio
+  - RPC_PlayJumpAudio
+  - RPC_PlayPickupAudio
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

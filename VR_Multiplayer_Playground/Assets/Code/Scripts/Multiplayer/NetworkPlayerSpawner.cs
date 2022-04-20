@@ -18,6 +18,8 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     [SerializeField] private int startTeam = 0;
     [SerializeField] private UnityEvent TeamJoinEvent;
 
+    [SerializeField] private FloatVariable teamToJoin;
+
     private void Awake()
     {
         if (initialSpawn == null) { initialSpawn = transform.position; }
@@ -81,5 +83,13 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
         Debug.Log($"Player joined team {PhotonNetwork.LocalPlayer.CustomProperties["Team"]}");
         TeamJoinEvent.Invoke();
+    }
+
+    /// <summary>
+    /// Sets local player to a team, using the float variable teamToJoin
+    /// </summary>
+    public void JoinTeam()
+    {
+        JoinTeam((int)teamToJoin.Value);
     }
 }

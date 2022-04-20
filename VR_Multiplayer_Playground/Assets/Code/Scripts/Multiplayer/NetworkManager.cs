@@ -11,8 +11,9 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [SerializeField] private int roomIndex;
     private PhotonView PV;
 
-    public int currectScene;
-    public int gameScene;
+    private int currectScene;
+    public int lobbyScene;
+    public FloatReference targetScene;
 
     [SerializeField] private UnityEvent NetworkSpawnPlayerEvent;
     [SerializeField] private UnityEvent StartGameEvent;
@@ -84,19 +85,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         currectScene = scene.buildIndex;
-        if (currectScene == gameScene)
+
+        if (currectScene != lobbyScene)
         {
             Debug.Log("Starting game");
             StartGameEvent.Invoke();
         }
+
+        if (PhotonNetwork.InRoom)
+            NetworkSpawnPlayerEvent.Invoke();
     }
 
-    public void StartGame()
+    public void LoadLevel()
     {
         if (!PhotonNetwork.IsMasterClient)
             return;
 
-        Debug.Log("Loading Level");
-        PhotonNetwork.LoadLevel(gameScene);
+        Debug.Log("Loading " + SceneManager.GetSceneByBuildIndex((int)targetScene.Value).name);
+        PhotonNetwork.LoadLevel((int)targetScene.Value);
     }
 }

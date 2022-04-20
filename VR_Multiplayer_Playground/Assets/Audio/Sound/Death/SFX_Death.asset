@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dbb696cce0fa2c4ba778f9d4b27d24f, type: 3}
-  m_Name: SFX_Oof
+  m_Name: SFX_Death
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 1607bf1bf31a82c4db5574f7d79d82fa, type: 3}
-  - {fileID: 8300000, guid: 06db59a285ff24b4ba85361160732da8, type: 3}
-  - {fileID: 8300000, guid: d1cfcd0750c748d4abe04db88842cdc9, type: 3}
-  - {fileID: 8300000, guid: 1d01ca3df738e1349add80b64e171ceb, type: 3}
-  volume: {x: 0.6, y: 0.6}
+  - {fileID: 8300000, guid: 6eb2489871d107f44a939e429ea81e36, type: 3}
+  - {fileID: 8300000, guid: d390389c47465cf498ae6e38300e7631, type: 3}
+  - {fileID: 8300000, guid: b862677646f745849914b8986b45c9dd, type: 3}
+  - {fileID: 8300000, guid: 88d9073b5c430a241bee3769cb6d2d0f, type: 3}
+  - {fileID: 8300000, guid: 090169aa26a75184eb5c1c9b9cc646d2, type: 3}
+  volume: {x: 0.5, y: 0.5}
   pitch: {x: 1, y: 1}
   spatialBlend: 1
   audioMixerGroup: {fileID: -529002028008718470, guid: bfa6165f95d087242af12b6a7d1a8467, type: 2}
   playOrder: 0
-  playIndex: 3
+  playIndex: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4375108888022043151}
   - component: {fileID: 4375108888022043145}
   - component: {fileID: 4375108888022043146}
+  - component: {fileID: 499393951}
   m_Layer: 0
   m_Name: Network Manager
   m_TagString: Untagged
@@ -46,8 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomIndex: 22
-  currectScene: 0
-  gameScene: 1
+  lobbyScene: 0
+  targetScene:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 6dacef9339aff4a44aa85f4beb6bc193, type: 2}
   NetworkSpawnPlayerEvent:
     m_PersistentCalls:
       m_Calls:
@@ -102,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ad0931ad4ff34409e3de5a05c7ddf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   startTeam: 0
   TeamJoinEvent:
     m_PersistentCalls:
@@ -125,6 +130,34 @@ MonoBehaviour:
       - m_Target: {fileID: 4375108888022043145}
         m_TargetAssemblyTypeName: NetworkPlayerSpawner, Assembly-CSharp
         m_MethodName: CreatePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &499393951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375108888022043150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd41b8fd24c66e44841d94414b93580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 06f4c11c93372844893c6b9c281301f7, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4375108888022043151}
+        m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
