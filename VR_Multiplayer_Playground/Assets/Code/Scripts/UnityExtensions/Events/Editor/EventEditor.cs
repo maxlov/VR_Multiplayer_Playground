@@ -4,6 +4,7 @@ using UnityEngine;
 [CustomEditor(typeof(GameEvent), editorForChildClasses: true)]
 public class EventEditor : Editor
 {
+
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
