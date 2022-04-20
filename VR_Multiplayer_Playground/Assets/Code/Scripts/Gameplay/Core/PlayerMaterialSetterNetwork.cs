@@ -33,6 +33,8 @@ public class PlayerMaterialSetterNetwork : MonoBehaviour
     [PunRPC]
     void RPC_SetMaterial(int team)
     {
-        playerMesh.material = teamColors[team];
+        Material[] mats = playerMesh.materials;
+        mats[1] = teamColors[team];
+        playerMesh.materials = mats;
     }
 }

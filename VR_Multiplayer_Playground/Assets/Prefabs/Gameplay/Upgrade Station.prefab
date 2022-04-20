@@ -306,7 +306,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5632181354305438090}
   - component: {fileID: 6080704646769329352}
-  - component: {fileID: 4959450854029292359}
   - component: {fileID: 5748358676324822646}
   m_Layer: 0
   m_Name: RenderTextureCamera
@@ -372,14 +371,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4959450854029292359
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6898885053381441411}
-  m_Enabled: 1
 --- !u!114 &5748358676324822646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,7 +1193,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7492076236360902047}
   - component: {fileID: 7492076236360902044}
-  - component: {fileID: 7492076236360902045}
   - component: {fileID: 7492076236360902042}
   m_Layer: 0
   m_Name: RenderTextureCamera
@@ -1268,14 +1258,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7492076236360902045
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492076236360902043}
-  m_Enabled: 1
 --- !u!114 &7492076236360902042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1842,14 +1824,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3764134531492513581, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
---- !u!1 &5813625646034654485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7936340475237810874, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
-  m_PrefabInstance: {fileID: 4507450272714708911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6279316146659956088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7613672583135707863, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
+  m_PrefabInstance: {fileID: 4507450272714708911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5813625646034654485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7936340475237810874, guid: 40399c0caabfea240b537edd0bdfdbf0, type: 3}
   m_PrefabInstance: {fileID: 4507450272714708911}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &6573266792191716624

@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbb696cce0fa2c4ba778f9d4b27d24f, type: 3}
   m_Name: SFX_Oof
   m_EditorClassIdentifier: 
-  clips: []
-  volume: {x: 0.5, y: 0.5}
+  clips:
+  - {fileID: 8300000, guid: 1607bf1bf31a82c4db5574f7d79d82fa, type: 3}
+  - {fileID: 8300000, guid: 06db59a285ff24b4ba85361160732da8, type: 3}
+  - {fileID: 8300000, guid: d1cfcd0750c748d4abe04db88842cdc9, type: 3}
+  - {fileID: 8300000, guid: 1d01ca3df738e1349add80b64e171ceb, type: 3}
+  volume: {x: 0.6, y: 0.6}
   pitch: {x: 1, y: 1}
-  spatialBlend: 0
-  audioMixerGroup: {fileID: 0}
+  spatialBlend: 1
+  audioMixerGroup: {fileID: -529002028008718470, guid: bfa6165f95d087242af12b6a7d1a8467, type: 2}
   playOrder: 0
-  playIndex: 0
+  playIndex: 3

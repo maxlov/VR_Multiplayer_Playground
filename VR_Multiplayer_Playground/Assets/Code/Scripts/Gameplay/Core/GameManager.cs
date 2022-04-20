@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     [SerializeField] private float endTime = 2f;
 
-    [SerializeField] private UnityEvent EndGameEvent;
+    [SerializeField] private FloatVariable targetLevel;
+    [SerializeField] private UnityEvent ChangeLevelEvent;
 
     public void SpawnPlayer()
     {
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     IEnumerator EndGameCoroutine()
     {
         yield return new WaitForSeconds(endTime);
-        PhotonNetwork.LoadLevel(0);
+        targetLevel.Value = 0; // Set target level to main lobby
+        ChangeLevelEvent.Invoke();
     }
 }

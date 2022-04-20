@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f197c36eba45d044abc0d84f7526a170, type: 3}
   m_Name: EndGameEvent
   m_EditorClassIdentifier: 
+  eventListeners: []
