@@ -37,3 +37,16 @@ https://freesound.org/people/Nox_Sound/packs/29890/
 "Well Done"
 qubodup
 https://opengameart.org/content/well-done
+
+•••••••••••• Model Credits •••••••••••••
+https://sketchfab.com/3d-models/human-03a70758739544b3aa705c13af3872b1
+https://sketchfab.com/3d-models/flamingo-aesthetics-181cb8eefacb4fd0b77c6c28209b82a5
+https://sketchfab.com/3d-models/cat-cada8f504504424bb5c51407e402bdaf
+https://sketchfab.com/3d-models/foutune-cat-e221e7478a9f42fc9bb5145d1dd0dd96
+https://sketchfab.com/3d-models/uxr-ascii-palm-tree-1825373b79d9491d9a03dd8374367670
+https://sketchfab.com/3d-models/fiji-water-bottle-219204daeb2f446ebbc3837df97e0a8a
+https://sketchfab.com/3d-models/vaporwave-mountains-655309efbf7647f9a6f573a1196cfdc9#download
+https://sketchfab.com/3d-models/helios-statue-48a564cc64554bb9961eaad5216d2f2e
+https://sketchfab.com/3d-models/the-night-pool-feb88510b862494b87c5847957d48ef3
+https://sketchfab.com/3d-models/pool-ball-405f6ed74fa94dbd9a06629a334585db
+

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Score
   m_EditorClassIdentifier: 
   DeveloperDescription: Player's score
-  defaultValue: 0
-  _value: 0
+  defaultValue: 200
+  _value: 200
