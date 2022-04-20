@@ -15,6 +15,7 @@ public class HealthManager : MonoBehaviour
 
     [SerializeField] private UnityEvent playerDeath;
     [SerializeField] private UnityEvent respawnPlayer;
+    [SerializeField] private UnityEvent takeDamageEvent;
 
     private bool _canDie = true;
 
@@ -37,6 +38,7 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(int damage)
 	{
+        takeDamageEvent.Invoke();
         health.Value -= damage;
         if (health.Value <= 0)
 		{
