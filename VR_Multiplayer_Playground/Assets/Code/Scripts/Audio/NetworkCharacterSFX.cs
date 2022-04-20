@@ -24,12 +24,12 @@ public class NetworkCharacterSFX : MonoBehaviourPun
 
     void Start()
     {
-        damageEventListener = new GameEventListener();
+        damageEventListener = gameObject.AddComponent<GameEventListener>();
         damageEvent.RegisterListener(damageEventListener);
         damageEventListener.Response = new UnityEvent();
         damageEventListener.Response.AddListener(PlayDamageAudio);
 
-        deathEventListener = new GameEventListener();
+        deathEventListener = gameObject.AddComponent<GameEventListener>();
         deathEvent.RegisterListener(deathEventListener);
         deathEventListener.Response = new UnityEvent();
         deathEventListener.Response.AddListener(PlayDeathAudio);
