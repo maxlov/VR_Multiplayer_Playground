@@ -4602,6 +4602,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631871587}
     m_Modifications:
+    - target: {fileID: 766004366805917565, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
+      propertyPath: percentIncrease.ConstantValue
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4018902675100021834, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_Name
       value: Upgrade Station (Blue)
@@ -6759,7 +6763,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c1fdebeecf604f4d8d72eaa0f6bd4ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -59.132
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386949149076829203, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754443987675630113, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754443987675630113, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854903598956807543, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854903598956807543, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854903598956807543, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854903598956807543, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854903598956807543, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854903598956807543, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560889048270002554, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0017841114
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 5c1fdebeecf604f4d8d72eaa0f6bd4ae, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10146,6 +10190,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631871587}
     m_Modifications:
+    - target: {fileID: 766004366805917565, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
+      propertyPath: percentIncrease.ConstantValue
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4018902675100021834, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_Name
       value: Upgrade Station (Pink)

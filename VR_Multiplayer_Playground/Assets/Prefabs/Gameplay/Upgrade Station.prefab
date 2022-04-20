@@ -1851,11 +1851,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 090d93d4dc40bf24789b5b1d4df70094, type: 2}
   percentIncrease:
     UseConstant: 1
-    ConstantValue: 0.01
+    ConstantValue: 0.2
     Variable: {fileID: 0}
   timePercentInc:
     UseConstant: 1
-    ConstantValue: 0.005
+    ConstantValue: 0.01
     Variable: {fileID: 0}
   teamScore: {fileID: 11400000, guid: dc477d8e7c514d94aa51eaca69353903, type: 2}
   statLevel: {fileID: 11400000, guid: 731c84a9b17a71d4c85d77544d6a696a, type: 2}
