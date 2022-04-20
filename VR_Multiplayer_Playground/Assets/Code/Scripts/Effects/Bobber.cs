@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bobber : MonoBehaviour
 {
-    private float bobIntensity = .25f;
-    private float bobFrequency = .25f;
-    private float rotateSpeed = 50.0f;
+    [SerializeField] private float bobIntensity = .25f;
+    [SerializeField] private float bobFrequency = .25f;
+    [SerializeField] private float rotateSpeed = 50.0f;
 
     private Vector3 posOffset;
     private Vector3 tempPos;
