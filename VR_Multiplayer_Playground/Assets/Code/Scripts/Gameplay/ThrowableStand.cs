@@ -15,16 +15,12 @@ public class ThrowableStand : MonoBehaviour
     [SerializeField] private float respawnSpeed = 5f;
 
     private bool startLoading = false;
-    private bool startSpawn = false;
-    private float spawnValue;
-    private float spawnValueGoal;
 
     private PhotonView photonView;
 
 
     void Start()
     {
-        spawnValueGoal = loadingBar.maxValue;
         photonView = GetComponent<PhotonView>();
         StartCoroutine(InitializeWait());
     }
@@ -37,8 +33,6 @@ public class ThrowableStand : MonoBehaviour
 
     public void NetworkLoadBar()
     {
-        spawnValue = 0;
-        startSpawn = true;
         photonView.RPC("LoadBar", RpcTarget.All);
     }
 
@@ -48,6 +42,7 @@ public class ThrowableStand : MonoBehaviour
         loadingBar.value = 0;
         startLoading = true;
         loadingUI.SetActive(true);
+        spawnPoint.GetComponent<Collider>().enabled = false;
     }
 
     void Update()
@@ -59,22 +54,19 @@ public class ThrowableStand : MonoBehaviour
 			{
                 startLoading = false;
                 loadingUI.SetActive(false);
-            }
-        }
-        if (startSpawn)
-		{
-            spawnValue += respawnSpeed * Time.deltaTime;
-            if (spawnValue >= spawnValueGoal)
-            {
-                startSpawn = false;
-                NetworkInstantiate();
+                photonView.RPC("NetworkInstantiate", RpcTarget.All);
             }
         }
     }
 
+    [PunRPC]
     public void NetworkInstantiate()
     {
         spawnPoint.GetComponent<Collider>().enabled = true;
+
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
         PhotonNetwork.Instantiate(throwable, spawnPoint.position, spawnPoint.rotation);
     }
 }

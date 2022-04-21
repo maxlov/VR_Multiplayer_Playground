@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Photon.Pun;
 
 public class Throwable : MonoBehaviour
 {
@@ -10,8 +11,11 @@ public class Throwable : MonoBehaviour
 
     public UnityEvent onHit;
 
-	private void Start()
+    private PhotonView photonView;
+
+    private void Start()
 	{
+        photonView = GetComponent<PhotonView>();
         healthManager = FindObjectOfType<HealthManager>();
         StartCoroutine(InitializeWait());
     }
@@ -28,7 +32,13 @@ public class Throwable : MonoBehaviour
         {
             healthManager.RemoveHealth(damage);
             onHit.Invoke();
-            Destroy(gameObject);
+            photonView.RPC("RPC_DestroySelf", RpcTarget.MasterClient);
         }
+    }
+
+    [PunRPC]
+    void RPC_DestroySelf()
+    {
+        PhotonNetwork.Destroy(photonView);
     }
 }
