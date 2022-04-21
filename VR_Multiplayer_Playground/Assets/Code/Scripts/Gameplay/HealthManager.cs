@@ -36,10 +36,12 @@ public class HealthManager : MonoBehaviour
         }  
     }
 
-    public void TakeDamage(int damage)
+    public void RemoveHealth(int damage)
 	{
         takeDamageEvent.Invoke();
         health.Value -= damage;
+        if (health.Value > 100)
+            health.Value = 100;
         if (health.Value <= 0)
 		{
             health.Value = 0;

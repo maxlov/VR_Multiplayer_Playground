@@ -12,7 +12,7 @@ public class TurretBullet : MonoBehaviour
 		int layerInt = LayerMask.NameToLayer("PlayerHitBox");
 		if (other.gameObject.layer == layerInt)
 		{
-			healthManager.TakeDamage(damage);
+			healthManager.RemoveHealth(damage);
 			Destroy(gameObject);
 		}
 	}
