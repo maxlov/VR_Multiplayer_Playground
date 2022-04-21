@@ -28,7 +28,7 @@ public class ThrowableStand : MonoBehaviour
     IEnumerator InitializeWait()
 	{
         yield return new WaitForSeconds(2);
-        NetworkInstantiate();
+        SpwanObject();
     }
 
     public void NetworkLoadBar()
@@ -42,7 +42,7 @@ public class ThrowableStand : MonoBehaviour
         loadingBar.value = 0;
         startLoading = true;
         loadingUI.SetActive(true);
-        spawnPoint.GetComponent<Collider>().enabled = false;
+        spawnPoint.gameObject.SetActive(false);
     }
 
     void Update()
@@ -54,19 +54,22 @@ public class ThrowableStand : MonoBehaviour
 			{
                 startLoading = false;
                 loadingUI.SetActive(false);
-                photonView.RPC("NetworkInstantiate", RpcTarget.All);
+                photonView.RPC("EnableSocket", RpcTarget.All);
+                SpwanObject();
             }
         }
     }
 
     [PunRPC]
-    public void NetworkInstantiate()
+    public void EnableSocket()
     {
-        spawnPoint.GetComponent<Collider>().enabled = true;
+        spawnPoint.gameObject.SetActive(true);
+    }
 
+    void SpwanObject()
+	{
         if (!PhotonNetwork.IsMasterClient)
             return;
-
         PhotonNetwork.Instantiate(throwable, spawnPoint.position, spawnPoint.rotation);
     }
 }
