@@ -41,7 +41,19 @@ public class Throwable : MonoBehaviour
         _bobber.enabled = false;
         //_rigidBody.isKinematic = false;
         //_rigidBody.useGravity = true;
-        Debug.Log("Is Ready");
+        ///Debug.Log("Is Ready");
+    }
+
+    public void TurnOnGravity()
+	{
+        _photonView.RPC("RPC_TurnOnGravity", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void RPC_TurnOnGravity()
+	{
+        _rigidBody.isKinematic = false;
+        _rigidBody.useGravity = true;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -12481,6 +12481,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 289305291, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
+      propertyPath: isTicking
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 289305292, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: playerHealthBar
       value: 
