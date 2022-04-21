@@ -64,6 +64,13 @@ public class ThrowableStand : MonoBehaviour
         if (!PhotonNetwork.IsMasterClient)
             return;
         var spawned = PhotonNetwork.Instantiate(throwableName, spawnPoint.position, spawnPoint.rotation);
+        photonView.RPC("SendRefs", RpcTarget.All, spawned.GetComponent<PhotonView>().ViewID);
+    }
+
+    [PunRPC]
+    public void SendRefs(int spawnedID)
+	{
+        GameObject spawned = PhotonView.Find(spawnedID).gameObject;
         if (spawned.TryGetComponent<Throwable>(out _throwableScript))
             _throwableScript.throwableStand = this;
     }

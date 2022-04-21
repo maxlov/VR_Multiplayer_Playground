@@ -39,8 +39,8 @@ public class Throwable : MonoBehaviour
     void ReadyThrowable()
 	{
         _bobber.enabled = false;
-        _rigidBody.isKinematic = false;
-        _rigidBody.useGravity = true;
+        //_rigidBody.isKinematic = false;
+        //_rigidBody.useGravity = true;
         Debug.Log("Is Ready");
     }
 
