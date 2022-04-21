@@ -58,6 +58,10 @@ MonoBehaviour:
   - LoadBar
   - AttachObject
   - NetworkInstantiate
+  - EnableSocket
+  - RPC_UpdateRigidbody
+  - UpdateParent
+  - ReadyThrowable
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
