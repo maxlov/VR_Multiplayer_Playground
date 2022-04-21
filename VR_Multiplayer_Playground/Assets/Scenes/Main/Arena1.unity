@@ -203,6 +203,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 4.11, z: 0.4}
   m_Center: {x: 0, y: 2.07, z: 0.09}
+--- !u!4 &42600856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4183030592573255611, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+  m_PrefabInstance: {fileID: 4183030592770826101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &65320962
 Mesh:
   m_ObjectHideFlags: 0
@@ -2513,6 +2518,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 4.11, z: 0.4}
   m_Center: {x: 0, y: 2.07, z: 0.09}
+--- !u!114 &458539964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4183030592726865151, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+  m_PrefabInstance: {fileID: 4183030592770826101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &480319258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5788,6 +5804,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7560889048270002554, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0017841114
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560889048270002554, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.31252462
+      objectReference: {fileID: 0}
     - target: {fileID: 8437078861031483779, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: sceneViewId
       value: 10
@@ -7322,6 +7346,10 @@ PrefabInstance:
     - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_Name
       value: ThrowableStand (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4183030591749205077, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8926,6 +8954,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1129438583000749737, guid: cd2659ea2dd984d47873ada5161e50a5, type: 3}
   m_PrefabInstance: {fileID: 1651016754}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1655947660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+  m_PrefabInstance: {fileID: 4183030592770826101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655947661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655947660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49bdad1f48b1ce4e88fa250184b64b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwable: CursorThrowable
+  spawnPoint: {fileID: 42600856}
+  loadingUI: {fileID: 1777137264}
+  loadingBar: {fileID: 458539964}
+  respawnSpeed: 10
 --- !u!43 &1691118336
 Mesh:
   m_ObjectHideFlags: 0
@@ -9668,6 +9718,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d3d4f11dbb5bd4dbeb387eeb5faa20, type: 3}
+--- !u!1 &1777137264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4183030592570367734, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+  m_PrefabInstance: {fileID: 4183030592770826101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1790229769
 GameObject:
   m_ObjectHideFlags: 0
@@ -11437,6 +11492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrowableStand (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4183030591749205077, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.599
@@ -12178,6 +12237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrowableStand (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4183030591749205077, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.599
@@ -12648,7 +12711,11 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1025091458}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4183030592770826106, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+    - {fileID: 5942361599578585792, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+    - {fileID: 4183030592573255610, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+    - {fileID: 4183030592770826105, guid: ae99f4956afbed742845640d7f38850d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ae99f4956afbed742845640d7f38850d, type: 3}
 --- !u!1001 &4375108888194346700
 PrefabInstance:

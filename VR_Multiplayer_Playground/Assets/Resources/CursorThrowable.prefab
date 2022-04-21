@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7361951430397649087}
   - component: {fileID: 5921423317341396904}
   - component: {fileID: 93654920361651847}
-  - component: {fileID: 6445066517910210880}
-  - component: {fileID: 2679723538277278699}
+  - component: {fileID: -1191877633487527283}
+  - component: {fileID: -5904131248573939727}
   m_Layer: 0
   m_Name: CursorThrowable
   m_TagString: Untagged
@@ -105,7 +105,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6445066517910210880
+--- !u!114 &-1191877633487527283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 3891677015131259496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d5d49e9ddeda74d8e941ff35411ebc, type: 3}
+  m_Script: {fileID: 11500000, guid: 36353f8dc084e1b44a390a13086e7206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobIntensity: 0.25
+  bobFrequency: 0.25
+  rotateSpeed: 50
+--- !u!114 &-5904131248573939727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3891677015131259496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef5cbe6ec3ea6445910a34fcdc6b806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -146,34 +161,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5921423317341396904}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5921423317341396904}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -244,21 +235,12 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &2679723538277278699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891677015131259496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83829bdd745bed74b982c21fdfb50512, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   damage: 50
   healthManager: {fileID: 0}
   onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onPickup:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &3891677014700468622

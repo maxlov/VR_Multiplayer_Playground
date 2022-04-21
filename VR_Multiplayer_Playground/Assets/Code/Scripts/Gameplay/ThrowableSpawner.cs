@@ -1,0 +1,71 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
+
+public class ThrowableSpawner : MonoBehaviour
+{
+    [SerializeField] private string throwable;
+    [SerializeField] private Transform spawnPoint;
+
+    [SerializeField] private GameObject loadingUI;
+    [SerializeField] private Slider loadingBar;
+    [SerializeField] private float respawnSpeed = 5f;
+
+    private bool startLoading = false;
+
+    private PhotonView photonView;
+
+
+    void Start()
+    {
+        photonView = GetComponent<PhotonView>();
+        StartCoroutine(InitializeWait());
+    }
+
+    IEnumerator InitializeWait()
+	{
+        yield return new WaitForSeconds(2);
+        SpawnObject();
+    }
+
+    public void NetworkLoadBar()
+    {
+        photonView.RPC("LoadBar", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void LoadBar()
+    {
+        loadingBar.value = 0;
+        startLoading = true;
+        loadingUI.SetActive(true);
+        spawnPoint.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (startLoading)
+		{
+            loadingBar.value += respawnSpeed * Time.deltaTime;
+            if (loadingBar.value >= loadingBar.maxValue)
+			{
+                startLoading = false;
+                loadingUI.SetActive(false);
+                SpawnObject();
+            }
+        }
+    }
+
+    void SpawnObject()
+	{
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+        Debug.Log("SpawningObject");
+        var instantiated = PhotonNetwork.Instantiate(throwable, spawnPoint.position, spawnPoint.rotation);
+        if (instantiated.TryGetComponent<NetworkThrowable>(out var pickupable))
+            pickupable.onPickup.AddListener(NetworkLoadBar);
+    }
+}

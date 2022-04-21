@@ -58,6 +58,8 @@ MonoBehaviour:
   - LoadBar
   - AttachObject
   - NetworkInstantiate
+  - EnableSocket
+  - RPC_DisableBobber
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

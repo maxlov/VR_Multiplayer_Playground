@@ -15,7 +15,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: ef4a5f609f3acdf48adccf35e99b5e6c, type: 3}
   volume: {x: 0.3, y: 0.3}
-  pitch: {x: 1, y: 1}
+  pitch: {x: 0.9, y: 1.1}
   spatialBlend: 0.8
   audioMixerGroup: {fileID: -529002028008718470, guid: bfa6165f95d087242af12b6a7d1a8467, type: 2}
   playOrder: 0
