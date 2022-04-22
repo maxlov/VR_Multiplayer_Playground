@@ -82,7 +82,6 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         hash["Team"] = team;
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
         Debug.Log($"Player joined team {PhotonNetwork.LocalPlayer.CustomProperties["Team"]}");
-        TeamChangeText.SpectateTeamSet();
         TeamJoinEvent.Invoke();
     }
 
