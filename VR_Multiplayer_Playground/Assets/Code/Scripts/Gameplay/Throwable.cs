@@ -39,6 +39,7 @@ public class Throwable : MonoBehaviour
     void ReadyThrowable()
 	{
         _bobber.enabled = false;
+        _photonView.RPC("RPC_TurnOnGravity", RpcTarget.All);
         //_rigidBody.isKinematic = false;
         //_rigidBody.useGravity = true;
         ///Debug.Log("Is Ready");

@@ -74,8 +74,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
 --- !u!65 &9019571634893417270
 BoxCollider:
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36353f8dc084e1b44a390a13086e7206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bobIntensity: 0.05
+  bobIntensity: 0.1
   bobFrequency: 0.1
   rotateSpeed: 50
 --- !u!114 &128389320998908982
