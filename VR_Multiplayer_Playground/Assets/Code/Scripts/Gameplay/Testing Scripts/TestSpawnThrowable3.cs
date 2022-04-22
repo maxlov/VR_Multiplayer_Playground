@@ -17,7 +17,7 @@ public class TestSpawnThrowable3 : MonoBehaviour
     {
         //if (!PhotonNetwork.IsMasterClient)
         //    return;
-        var spawned = PhotonNetwork.Instantiate("Test3", spawnPoint.position, spawnPoint.rotation);
+        var spawned = PhotonNetwork.InstantiateRoomObject("Test3", spawnPoint.position, spawnPoint.rotation);
         //photonView.RPC("SendRefs", RpcTarget.All, spawned.GetComponent<PhotonView>().ViewID);
         //Debug.Log(spawned.GetComponent<PhotonView>().ViewID + " clientside");
     }
