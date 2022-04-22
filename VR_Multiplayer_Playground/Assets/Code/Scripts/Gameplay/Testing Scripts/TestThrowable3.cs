@@ -14,6 +14,7 @@ public class TestThrowable3 : MonoBehaviour
     {
         _photonView = GetComponent<PhotonView>();
         _rigidBody = GetComponent<Rigidbody>();
+        _bobber = GetComponent<Bobber>();
     }
 
     public void TurnOnGravity()
