@@ -7,8 +7,8 @@ using Photon.Pun;
 
 public class ThrowableStand : MonoBehaviour
 {
-    [SerializeField] private string throwable;
-    [SerializeField] private Transform spawnPoint;
+    public Transform spawnPoint;
+    [SerializeField] private string throwableName;
 
     [SerializeField] private GameObject loadingUI;
     [SerializeField] private Slider loadingBar;
@@ -16,6 +16,7 @@ public class ThrowableStand : MonoBehaviour
 
     private bool startLoading = false;
 
+    private Throwable _throwableScript;
     private PhotonView photonView;
 
 
@@ -28,7 +29,7 @@ public class ThrowableStand : MonoBehaviour
     IEnumerator InitializeWait()
 	{
         yield return new WaitForSeconds(2);
-        SpwanObject();
+        SpawnObject();
     }
 
     public void NetworkLoadBar()
@@ -42,7 +43,6 @@ public class ThrowableStand : MonoBehaviour
         loadingBar.value = 0;
         startLoading = true;
         loadingUI.SetActive(true);
-        spawnPoint.gameObject.SetActive(false);
     }
 
     void Update()
@@ -54,22 +54,26 @@ public class ThrowableStand : MonoBehaviour
 			{
                 startLoading = false;
                 loadingUI.SetActive(false);
-                photonView.RPC("EnableSocket", RpcTarget.All);
-                SpwanObject();
+                SpawnObject();
             }
         }
     }
 
-    [PunRPC]
-    public void EnableSocket()
-    {
-        spawnPoint.gameObject.SetActive(true);
-    }
-
-    void SpwanObject()
+    void SpawnObject()
 	{
         if (!PhotonNetwork.IsMasterClient)
             return;
-        PhotonNetwork.Instantiate(throwable, spawnPoint.position, spawnPoint.rotation);
+        var spawned = PhotonNetwork.Instantiate(throwableName, spawnPoint.position, spawnPoint.rotation);
+        photonView.RPC("SendRefs", RpcTarget.All, spawned.GetComponent<PhotonView>().ViewID);
+        Debug.Log(spawned.GetComponent<PhotonView>().ViewID + " clientside");
+    }
+
+    [PunRPC]
+    public void SendRefs(int spawnedID)
+	{
+        Debug.Log(spawnedID + " RPC method called");
+        GameObject spawned = PhotonView.Find(spawnedID).gameObject;
+        if (spawned.TryGetComponent<Throwable>(out _throwableScript))
+            _throwableScript.throwableStand = this;
     }
 }

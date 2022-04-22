@@ -59,6 +59,12 @@ MonoBehaviour:
   - AttachObject
   - NetworkInstantiate
   - EnableSocket
+  - RPC_UpdateRigidbody
+  - UpdateParent
+  - ReadyThrowable
+  - SendRefs
+  - RPC_TurnOnGravity
+  - TurnOffBobbler
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

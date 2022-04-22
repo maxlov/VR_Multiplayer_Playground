@@ -24,6 +24,11 @@ namespace Max.VRTools.Input.Keyboard
                 inputField.text = inputField.text.Substring(0, inputField.text.Length - 1);
         }
 
+        public void ClearText()
+        {
+            inputField.text = "";
+        }
+
         public void InsertSpace()
         {
             inputField.text += " ";

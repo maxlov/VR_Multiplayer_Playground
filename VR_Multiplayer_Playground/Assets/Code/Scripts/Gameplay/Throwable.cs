@@ -8,37 +8,72 @@ public class Throwable : MonoBehaviour
 {
     public int damage;
     public HealthManager healthManager;
+    public ThrowableStand throwableStand;
 
     public UnityEvent onHit;
 
-    private PhotonView photonView;
+    private bool _isActive = false;
+    private Rigidbody _rigidBody;
+    private Bobber _bobber;
+    private PhotonView _photonView;
 
     private void Start()
 	{
-        photonView = GetComponent<PhotonView>();
+        _photonView = GetComponent<PhotonView>();
+        _rigidBody = GetComponent<Rigidbody>();
+        _bobber = GetComponent<Bobber>();
         healthManager = FindObjectOfType<HealthManager>();
-        StartCoroutine(InitializeWait());
     }
-    IEnumerator InitializeWait()
-    {
-        yield return new WaitForSeconds(0.1f);
-        gameObject.GetComponent<Collider>().enabled = true;
+
+    public void InitialPickedUp()
+	{
+        if (_isActive == false)
+        {
+            throwableStand.NetworkLoadBar();
+            _photonView.RPC("ReadyThrowable", RpcTarget.All);
+            _isActive = true;
+        }
+    }
+
+    [PunRPC]
+    void ReadyThrowable()
+	{
+        _bobber.enabled = false;
+        _photonView.RPC("RPC_TurnOnGravity", RpcTarget.All);
+        //_rigidBody.isKinematic = false;
+        //_rigidBody.useGravity = true;
+        ///Debug.Log("Is Ready");
+    }
+
+    public void TurnOnGravity()
+	{
+        _photonView.RPC("RPC_TurnOnGravity", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void RPC_TurnOnGravity()
+	{
+        _rigidBody.isKinematic = false;
+        _rigidBody.useGravity = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        int layerInt = LayerMask.NameToLayer("PlayerHitBox");
-        if (other.gameObject.layer == layerInt)
+        if (_isActive)
         {
-            healthManager.RemoveHealth(damage);
-            onHit.Invoke();
-            photonView.RPC("RPC_DestroySelf", RpcTarget.MasterClient);
+            int layerInt = LayerMask.NameToLayer("PlayerHitBox");
+            if (other.gameObject.layer == layerInt)
+            {
+                healthManager.RemoveHealth(damage);
+                onHit.Invoke();
+                _photonView.RPC("RPC_DestroySelf", RpcTarget.MasterClient);
+            }
         }
     }
 
     [PunRPC]
     void RPC_DestroySelf()
     {
-        PhotonNetwork.Destroy(photonView);
+        PhotonNetwork.Destroy(_photonView);
     }
 }
