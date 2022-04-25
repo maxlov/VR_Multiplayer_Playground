@@ -12,38 +12,21 @@ public class Throwable : MonoBehaviour
 
     public UnityEvent onHit;
 
-    private bool _isActive = false;
+    [SerializeField] private bool _isActive = false;
 
     private void Start()
 	{
         healthManager = FindObjectOfType<HealthManager>();
-        StartCoroutine(InitializeWait());
     }
 
-    IEnumerator InitializeWait()
-    {
-        yield return new WaitForSeconds(0.5f);
-        ToggleCollider(true);
-    }
-
-    public void ToggleCollider(bool input)
+    public void ToggleActive(bool input)
 	{
-        _photonView.RPC("RPC_ToggleCollider", RpcTarget.All, input);
+        _photonView.RPC("RPC_Active", RpcTarget.All, input);
     }
     [PunRPC]
-    void RPC_ToggleCollider(bool input)
+    void RPC_Active(bool input)
     {
-        gameObject.GetComponent<Collider>().enabled = input;
-    }
-
-    public void Activate ()
-	{
-        _photonView.RPC("RPC_Active", RpcTarget.All);
-    }
-    [PunRPC]
-    void RPC_Active()
-    {
-        _isActive = true;
+        _isActive = input;
     }
 
     private void OnTriggerEnter(Collider other)
