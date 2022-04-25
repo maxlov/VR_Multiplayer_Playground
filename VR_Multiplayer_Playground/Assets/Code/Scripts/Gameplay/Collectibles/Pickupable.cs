@@ -7,6 +7,7 @@ public class Pickupable : MonoBehaviour
 {
     [SerializeField] private PickupEffect effect;
     public UnityEvent pickupEvent;
+    public UnityEvent destroyEvent;
 
     private PhotonView photonView;
 
@@ -30,6 +31,7 @@ public class Pickupable : MonoBehaviour
 
     [PunRPC] void RPC_DestroySelf()
     {
+        destroyEvent.Invoke();
         PhotonNetwork.Destroy(photonView);
     }
 }
