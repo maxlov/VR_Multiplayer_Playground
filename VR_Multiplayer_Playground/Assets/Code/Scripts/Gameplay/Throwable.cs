@@ -8,15 +8,14 @@ public class Throwable : MonoBehaviour
 {
     public int damage;
     public HealthManager healthManager;
+    [SerializeField] private PhotonView _photonView;
 
     public UnityEvent onHit;
 
     private bool _isActive = false;
-    private PhotonView _photonView;
 
     private void Start()
 	{
-        _photonView = GetComponent<PhotonView>();
         healthManager = FindObjectOfType<HealthManager>();
         StartCoroutine(InitializeWait());
     }

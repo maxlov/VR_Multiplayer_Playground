@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 93654920361651847}
   - component: {fileID: 6445066517910210880}
   - component: {fileID: 2679723538277278699}
-  - component: {fileID: -3728192087483946839}
   m_Layer: 15
   m_Name: CursorThrowable
   m_TagString: Untagged
@@ -52,13 +51,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObservedComponentsFoldoutOpen: 1
   Group: 0
-  prefixField: -1
+  prefixField: 0
   Synchronization: 3
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7361951430397649087}
-  - {fileID: -3728192087483946839}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -272,25 +270,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   healthManager: {fileID: 0}
+  _photonView: {fileID: 4453428351379228076}
   onHit:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-3728192087483946839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891677015131259496}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1001 &3891677014700468622
 PrefabInstance:
   m_ObjectHideFlags: 0

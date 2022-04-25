@@ -63,7 +63,7 @@ public class ThrowableStand : MonoBehaviour
     [PunRPC]
     void ToggleSocket(bool toggle)
 	{
-        spawnPoint.GetComponent<Collider>().enabled = toggle;
+        spawnPoint.gameObject.SetActive(toggle);
 	}
 
     void SpawnObject()
