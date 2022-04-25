@@ -22,7 +22,7 @@ public class Throwable : MonoBehaviour
 
     IEnumerator InitializeWait()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         ToggleCollider(true);
     }
 
@@ -55,7 +55,7 @@ public class Throwable : MonoBehaviour
             {
                 healthManager.RemoveHealth(damage);
                 onHit.Invoke();
-                _photonView.RPC("RPC_DestroySelf", RpcTarget.MasterClient);
+                _photonView.RPC("RPC_DestroySelf", RpcTarget.All);
             }
         }
     }
@@ -63,6 +63,7 @@ public class Throwable : MonoBehaviour
     [PunRPC]
     void RPC_DestroySelf()
     {
-        PhotonNetwork.Destroy(_photonView);
+        if (_photonView.IsMine)
+            PhotonNetwork.Destroy(_photonView);
     }
 }
