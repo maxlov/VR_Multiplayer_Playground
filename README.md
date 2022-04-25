@@ -49,4 +49,5 @@ https://sketchfab.com/3d-models/vaporwave-mountains-655309efbf7647f9a6f573a1196c
 https://sketchfab.com/3d-models/helios-statue-48a564cc64554bb9961eaad5216d2f2e
 https://sketchfab.com/3d-models/the-night-pool-feb88510b862494b87c5847957d48ef3
 https://sketchfab.com/3d-models/pool-ball-405f6ed74fa94dbd9a06629a334585db
+https://sketchfab.com/3d-models/coin-super-mario-odyssey-194df1c9a74c4bab95305e4cc6fc1cca
 

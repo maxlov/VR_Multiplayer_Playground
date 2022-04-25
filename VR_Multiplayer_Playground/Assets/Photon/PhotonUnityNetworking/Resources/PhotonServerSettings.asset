@@ -65,6 +65,12 @@ MonoBehaviour:
   - SendRefs
   - RPC_TurnOnGravity
   - TurnOffBobbler
+  - ToggleSocket
+  - RPC_ActivateCollider
+  - RPC_ToggleActive
+  - RPC_Active
+  - RPC_ToggleCollider
+  - RPC_ChooseHat
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

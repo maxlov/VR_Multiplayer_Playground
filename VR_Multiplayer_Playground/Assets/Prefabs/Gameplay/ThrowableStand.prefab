@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27ee5e2b292bc8499791373a9d4d5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwable: CursorThrowable
+  throwableName: CursorThrowable
   spawnPoint: {fileID: 4183030592573255611}
   loadingUI: {fileID: 4183030592570367734}
   loadingBar: {fileID: 4183030592726865151}
@@ -397,7 +397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4183030592573255608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.285, z: 0}
+  m_LocalPosition: {x: 0, y: 1.274, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4183030591695026788}
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36353f8dc084e1b44a390a13086e7206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bobIntensity: 0.1
+  bobIntensity: 0.01
   bobFrequency: 0.1
   rotateSpeed: 50
 --- !u!114 &4183030592770826106

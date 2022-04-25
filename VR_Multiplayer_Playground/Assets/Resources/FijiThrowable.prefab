@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 9019571634893417270}
   - component: {fileID: 2717026906243168602}
   - component: {fileID: 9045782138982473373}
-  - component: {fileID: -7255704186450328387}
   - component: {fileID: 128389320998908982}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: FijiThrowable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +53,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4815065871398811490}
@@ -101,8 +100,8 @@ Rigidbody:
   m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.01
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -148,22 +147,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9019571634893417270}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2679723538277278699, guid: 068f757d9c5ee4f45a7accfda6c05885, type: 3}
         m_TargetAssemblyTypeName: Throwable, Assembly-CSharp
-        m_MethodName: InitialPickedUp
-        m_Mode: 1
+        m_MethodName: ToggleCollider
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -175,9 +162,9 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9019571634893417270}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 2679723538277278699, guid: 068f757d9c5ee4f45a7accfda6c05885, type: 3}
+        m_TargetAssemblyTypeName: Throwable, Assembly-CSharp
+        m_MethodName: ToggleCollider
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -187,10 +174,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 93654920361651847, guid: 068f757d9c5ee4f45a7accfda6c05885, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_useGravity
-        m_Mode: 6
+      - m_Target: {fileID: 2679723538277278699, guid: 068f757d9c5ee4f45a7accfda6c05885, type: 3}
+        m_TargetAssemblyTypeName: Throwable, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -198,18 +185,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 93654920361651847, guid: 068f757d9c5ee4f45a7accfda6c05885, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_isKinematic
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
   m_Activated:
     m_PersistentCalls:
@@ -281,21 +256,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &-7255704186450328387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367520423186617781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36353f8dc084e1b44a390a13086e7206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bobIntensity: 0.1
-  bobFrequency: 0.1
-  rotateSpeed: 50
 --- !u!114 &128389320998908982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +270,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: -100
   healthManager: {fileID: 0}
-  throwableStand: {fileID: 0}
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -324,6 +283,10 @@ PrefabInstance:
     - target: {fileID: 5889997373242763630, guid: 19f1bf81a7da01043b03f337908b4d98, type: 3}
       propertyPath: m_Name
       value: Fiji
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889997373242763630, guid: 19f1bf81a7da01043b03f337908b4d98, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6554612997341197268, guid: 19f1bf81a7da01043b03f337908b4d98, type: 3}
       propertyPath: m_RootOrder

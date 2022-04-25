@@ -25,6 +25,7 @@ TagManager:
   - PostProcessing
   - PlayerHitBox
   - PlayerHUD
+  - Throwable
   - 
   - 
   - 

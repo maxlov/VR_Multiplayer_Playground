@@ -8,53 +8,43 @@ public class Throwable : MonoBehaviour
 {
     public int damage;
     public HealthManager healthManager;
-    public ThrowableStand throwableStand;
 
     public UnityEvent onHit;
 
     private bool _isActive = false;
-    private Rigidbody _rigidBody;
-    private Bobber _bobber;
     private PhotonView _photonView;
 
     private void Start()
 	{
         _photonView = GetComponent<PhotonView>();
-        _rigidBody = GetComponent<Rigidbody>();
-        _bobber = GetComponent<Bobber>();
         healthManager = FindObjectOfType<HealthManager>();
+        StartCoroutine(InitializeWait());
     }
 
-    public void InitialPickedUp()
+    IEnumerator InitializeWait()
+    {
+        yield return new WaitForSeconds(0.1f);
+        ToggleCollider(true);
+    }
+
+    public void ToggleCollider(bool input)
 	{
-        if (_isActive == false)
-        {
-            throwableStand.NetworkLoadBar();
-            _photonView.RPC("ReadyThrowable", RpcTarget.All);
-            _isActive = true;
-        }
+        _photonView.RPC("RPC_ToggleCollider", RpcTarget.All, input);
     }
-
     [PunRPC]
-    void ReadyThrowable()
-	{
-        _bobber.enabled = false;
-        _photonView.RPC("RPC_TurnOnGravity", RpcTarget.All);
-        //_rigidBody.isKinematic = false;
-        //_rigidBody.useGravity = true;
-        ///Debug.Log("Is Ready");
+    void RPC_ToggleCollider(bool input)
+    {
+        gameObject.GetComponent<Collider>().enabled = input;
     }
 
-    public void TurnOnGravity()
+    public void Activate ()
 	{
-        _photonView.RPC("RPC_TurnOnGravity", RpcTarget.All);
+        _photonView.RPC("RPC_Active", RpcTarget.All);
     }
-
     [PunRPC]
-    void RPC_TurnOnGravity()
-	{
-        _rigidBody.isKinematic = false;
-        _rigidBody.useGravity = true;
+    void RPC_Active()
+    {
+        _isActive = true;
     }
 
     private void OnTriggerEnter(Collider other)

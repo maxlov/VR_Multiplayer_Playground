@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -23,6 +24,8 @@ public class NetworkPlayer : MonoBehaviour
     [SerializeField] private GameObject beltParticles;
     [SerializeField] private Slider healthBar;
 
+    [SerializeField] private Transform hats;
+
     public UnityEvent onTakeDamage;
     public UnityEvent onDeath;
     public UnityEvent onRespawn;
@@ -30,14 +33,15 @@ public class NetworkPlayer : MonoBehaviour
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
+
+        if (photonView.IsMine)
+            mesh.enabled = false;
     }
 
     private void Update()
     {
         if (!photonView.IsMine)
            return;
-
-        mesh.enabled = false;
 
         MapPosition(head, headOrigin);
         MapPosition(leftHand, leftHandOrigin);
@@ -88,9 +92,32 @@ public class NetworkPlayer : MonoBehaviour
         onRespawn.Invoke();
         if (!photonView.IsMine)
 		{
-            mesh.gameObject.SetActive(true);
-            beltParticles.SetActive(true);
+            StartCoroutine(RespawnWait());
         }
         healthBar.value = 100;
     }
+
+    IEnumerator RespawnWait()
+    {
+        yield return new WaitForSeconds(0.1f);
+        mesh.gameObject.SetActive(true);
+        beltParticles.SetActive(true);
+    }
+
+    public void ChooseHat(int index)
+	{
+        photonView.RPC("RPC_ChooseHat", RpcTarget.All, index);
+    }
+
+    [PunRPC]
+     void RPC_ChooseHat(int index)
+	{
+		for (int i = 0; i < hats.childCount; i++)
+		{
+            if (i == index && !photonView.IsMine)
+                hats.GetChild(i).gameObject.SetActive(true);
+            else
+                hats.GetChild(i).gameObject.SetActive(false);
+        }
+	}
 }

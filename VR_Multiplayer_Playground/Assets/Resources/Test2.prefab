@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2135248145235149758}
   - component: {fileID: 3043191938838166827}
   - component: {fileID: -6852865634404511045}
-  m_Layer: 6
+  m_Layer: 15
   m_Name: Test2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3043191938838166827}
