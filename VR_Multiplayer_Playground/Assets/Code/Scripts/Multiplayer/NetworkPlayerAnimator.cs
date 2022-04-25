@@ -14,7 +14,7 @@ public class NetworkPlayerAnimator : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         XROrigin origin = FindObjectOfType<XROrigin>();
-        _clientAnimator = origin.transform.parent.Find("Avatar1").GetComponent<Animator>();
+        _clientAnimator = origin.transform.parent.Find("Avatar1 LongerArms").GetComponent<Animator>();
     }
 
     void Update()

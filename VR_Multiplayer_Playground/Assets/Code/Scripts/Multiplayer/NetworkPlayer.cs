@@ -35,7 +35,10 @@ public class NetworkPlayer : MonoBehaviour
         photonView = GetComponent<PhotonView>();
 
         if (photonView.IsMine)
+		{
             mesh.enabled = false;
+            beltParticles.SetActive(false);
+        }        
     }
 
     private void Update()
