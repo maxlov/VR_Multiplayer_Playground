@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333359404001411707, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
       propertyPath: m_Name
-      value: ScoreOrbSpawner
+      value: CollectibleSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 4996401251519968936, guid: 4d9ad450e3dc4e344a29b562650f3642, type: 3}
       propertyPath: m_RootOrder

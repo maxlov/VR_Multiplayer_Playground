@@ -25,10 +25,9 @@ public class PhotonObjectSpawner : MonoBehaviour
     {
         if (!PhotonNetwork.IsMasterClient)
             return;
-
         lastSpawned = PhotonNetwork.Instantiate(prefabName, spawnPoint.position, Quaternion.identity);
         if (lastSpawned.TryGetComponent<Pickupable>(out pickupable))
-            pickupable.pickupEvent.AddListener(OnObjectPickup);
+            pickupable.destroyEvent.AddListener(OnObjectPickup);
     }
 
     private void OnObjectPickup()

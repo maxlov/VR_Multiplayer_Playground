@@ -867,6 +867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrowableStand (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4183030592205364633, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -879,6 +883,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1025091458}
+    - target: {fileID: 4183030592770826106, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae99f4956afbed742845640d7f38850d, type: 3}
 --- !u!1 &114832520
@@ -10204,6 +10212,10 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 3948660685408233000, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4183030591695026788, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_RootOrder
       value: 46
@@ -10252,6 +10264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrowableStand (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4183030592205364633, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -10264,6 +10280,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1025091458}
+    - target: {fileID: 4183030592770826106, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae99f4956afbed742845640d7f38850d, type: 3}
 --- !u!1001 &1775779588
@@ -12687,6 +12707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrowableStand (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4183030592205364633, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -12695,6 +12719,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1025091458}
+    - target: {fileID: 4183030592770826106, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae99f4956afbed742845640d7f38850d, type: 3}
 --- !u!1001 &2054464017
@@ -13230,6 +13258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrowableStand
       objectReference: {fileID: 0}
+    - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4183030592205364633, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -13238,6 +13270,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1025091458}
+    - target: {fileID: 4183030592770826106, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae99f4956afbed742845640d7f38850d, type: 3}
 --- !u!1001 &4375108888194346700
