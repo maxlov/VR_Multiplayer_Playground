@@ -43,45 +43,45 @@ public class NetworkCharacterSFX : MonoBehaviourPun
 
     private void PlayDeathAudio()
     {
-        photonView.RPC("RPC_PlayDeathAudio", RpcTarget.All);
+        photonView.RPC("RPC_PlayDeathAudio", RpcTarget.All, transform.position);
     }
 
     private void PlayDamageAudio()
     {
-        photonView.RPC("RPC_PlayDamageAudio", RpcTarget.All);
+        photonView.RPC("RPC_PlayDamageAudio", RpcTarget.All, transform.position);
     }
 
     public void PlayJumpAudio()
     {
-        photonView.RPC("RPC_PlayJumpAudio", RpcTarget.All);
+        photonView.RPC("RPC_PlayJumpAudio", RpcTarget.All, transform.position);
     }
 
     public void PlayPickupAudio()
     {
-        photonView.RPC("RPC_PlayPickupAudio", RpcTarget.All);
+        photonView.RPC("RPC_PlayPickupAudio", RpcTarget.All, transform.position);
     }
 
     [PunRPC]
-    private void RPC_PlayDeathAudio()
+    private void RPC_PlayDeathAudio(Vector3 position)
     {
-        deathSFX.Play();
+        deathSFX.Play(position);
     }
 
     [PunRPC]
-    private void RPC_PlayDamageAudio()
+    private void RPC_PlayDamageAudio(Vector3 position)
     {
-        damageSFX.Play();
+        damageSFX.Play(position);
     }
 
     [PunRPC]
-    private void RPC_PlayJumpAudio()
+    private void RPC_PlayJumpAudio(Vector3 position)
     {
-        jumpSFX.Play();
+        jumpSFX.Play(position);
     }
 
     [PunRPC]
-    private void RPC_PlayPickupAudio()
+    private void RPC_PlayPickupAudio(Vector3 position)
     {
-        pickupSFX.Play();
+        pickupSFX.Play(position);
     }
 }
