@@ -6128,17 +6128,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5977239848222787524, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_Name
+      value: Jump Image
+      objectReference: {fileID: 0}
     - target: {fileID: 7560889048270002554, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0017841111
+      value: 0.0017841114
       objectReference: {fileID: 0}
     - target: {fileID: 7560889048270002554, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.31252453
+      value: 0.31252462
       objectReference: {fileID: 0}
     - target: {fileID: 8437078861031483779, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: sceneViewId
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159905723305270475, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
@@ -13325,7 +13333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4375108888022043151, guid: 8802659a4104a6548815278e19987223, type: 3}
       propertyPath: roomIndex
-      value: 2
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8802659a4104a6548815278e19987223, type: 3}
