@@ -263,6 +263,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isActive: 0
+  _initialActive: 0
 --- !u!1001 &3891677014700468622
 PrefabInstance:
   m_ObjectHideFlags: 0
