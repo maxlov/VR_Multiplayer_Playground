@@ -30,7 +30,7 @@ public class NetworkPlayer : MonoBehaviour
     public UnityEvent onDeath;
     public UnityEvent onRespawn;
 
-    private void Start()
+    private void Awake()
     {
         photonView = GetComponent<PhotonView>();
 
