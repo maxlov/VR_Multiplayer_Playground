@@ -34,9 +34,8 @@ public class ThrowableStand : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Throwable") && _canLoad)
-            if (_throwable == null)
-                _throwable = other.gameObject;
+        if (other.CompareTag("Throwable") && _canLoad && _throwable == null)
+            _throwable = other.gameObject;
     }
 
     private void OnTriggerExit(Collider other)
