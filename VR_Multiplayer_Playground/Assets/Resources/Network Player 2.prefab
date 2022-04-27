@@ -1173,6 +1173,8 @@ GameObject:
   - component: {fileID: 321142945572064858}
   - component: {fileID: 4931526616094282015}
   - component: {fileID: 367861809673930344}
+  - component: {fileID: 4777933653020798982}
+  - component: {fileID: 932568327551103371}
   m_Layer: 0
   m_Name: Network Player 2
   m_TagString: Untagged
@@ -1325,6 +1327,47 @@ MonoBehaviour:
       - m_Target: {fileID: 4931526616094282015}
         m_TargetAssemblyTypeName: PlayerMaterialSetterNetwork, Assembly-CSharp
         m_MethodName: SetMaterial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4777933653020798982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284248089840969384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6273f5d04d8497043b42b926a9340a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nametag: {fileID: 7135755859992991334}
+--- !u!114 &932568327551103371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284248089840969384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd41b8fd24c66e44841d94414b93580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 25d6b9c86bcac734ebf515ce1ca6bdb7, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4777933653020798982}
+        m_TargetAssemblyTypeName: PlayerNametagSetter, Assembly-CSharp
+        m_MethodName: UpdateNametag
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
