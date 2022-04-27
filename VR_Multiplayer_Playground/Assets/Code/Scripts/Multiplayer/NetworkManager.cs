@@ -1,5 +1,6 @@
 using Photon.Pun;
 using Photon.Realtime;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -101,7 +102,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
             return;
 
+        StartCoroutine(LoadLevelCoroutine());
+    }
+
+    IEnumerator LoadLevelCoroutine()
+    {
+        yield return new WaitForSeconds(2);
         Debug.Log("Loading " + SceneManager.GetSceneByBuildIndex((int)targetScene.Value).name);
         PhotonNetwork.LoadLevel((int)targetScene.Value);
     }
+    
 }

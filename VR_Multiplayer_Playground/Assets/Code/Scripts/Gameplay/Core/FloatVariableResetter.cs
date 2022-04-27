@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Photon.Pun;
+using Photon.Realtime;
+using ExitGames.Client.Photon;
 
 public class FloatVariableResetter : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class FloatVariableResetter : MonoBehaviour
     [SerializeField] GameEvent resetEvent;
     private GameEventListener gameEventListener;
     private PhotonView photonView;
+
+    [HideInInspector]
+    public const byte ResetVariablesEventCode = 1;
 
     private void Awake()
     {
@@ -21,22 +26,31 @@ public class FloatVariableResetter : MonoBehaviour
         gameEventListener.Response.AddListener(ResetVariables);
     }
 
+    private void OnEnable()
+    {
+        PhotonNetwork.NetworkingClient.EventReceived += PhotonOnEventResetVariables;
+    }
+
     private void OnDisable()
     {
         resetEvent.UnregisterListener(gameEventListener);
+        PhotonNetwork.NetworkingClient.EventReceived -= PhotonOnEventResetVariables;
     }
 
     private void ResetVariables()
     {
-        photonView.RPC("RPC_ResetVariables", RpcTarget.All);
+        object[] content = new object[] { };
+        RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All };
+        PhotonNetwork.RaiseEvent(ResetVariablesEventCode, content, raiseEventOptions, SendOptions.SendReliable);
     }
 
-    [PunRPC]
-    private void RPC_ResetVariables()
+    private void PhotonOnEventResetVariables(EventData photonEvent)
     {
+        byte eventCode = photonEvent.Code;
+        if (eventCode != ResetVariablesEventCode)
+            return;
+        Debug.Log("Resetting variables");
         foreach (var fv in variablesToReset)
             fv.SetValue(fv.defaultValue);
     }
-
-
 }
