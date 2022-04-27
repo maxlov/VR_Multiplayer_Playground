@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SpeedLevel
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  defaultValue: 0
-  _value: 0
+  defaultValue: 1
+  _value: 1
