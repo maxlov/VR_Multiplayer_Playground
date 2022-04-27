@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2717026906243168602}
   - component: {fileID: 9045782138982473373}
   - component: {fileID: 128389320998908982}
-  m_Layer: 15
+  m_Layer: 16
   m_Name: FijiThrowable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isActive: 0
-  _initialActive: 0
 --- !u!1001 &1722921789663938779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -277,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5889997373242763630, guid: 19f1bf81a7da01043b03f337908b4d98, type: 3}
       propertyPath: m_Layer
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6554612997341197268, guid: 19f1bf81a7da01043b03f337908b4d98, type: 3}
       propertyPath: m_RootOrder

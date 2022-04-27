@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 93654920361651847}
   - component: {fileID: 6445066517910210880}
   - component: {fileID: 2679723538277278699}
-  m_Layer: 15
+  m_Layer: 16
   m_Name: CursorThrowable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isActive: 0
-  _initialActive: 0
 --- !u!1001 &3891677014700468622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -333,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 97328390e09f78741bf6a79aa47be42f, type: 3}
       propertyPath: m_Layer
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97328390e09f78741bf6a79aa47be42f, type: 3}

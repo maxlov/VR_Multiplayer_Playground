@@ -27,12 +27,12 @@ public class Throwable : MonoBehaviour
     [PunRPC]
     void RPC_Active(bool input)
     {
-        if (input == true && _initialActive == false)
-        {
-            _initialActive = true;
-            return;
-        }
-        _isActive = input;
+		if (input == true && _initialActive == false)
+		{
+			_initialActive = true;
+			return;
+		}
+		_isActive = input;
     }
 
     private void OnTriggerEnter(Collider other)

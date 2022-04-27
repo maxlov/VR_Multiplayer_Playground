@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8217764687852806341}
   - component: {fileID: 3041792385754711810}
   - component: {fileID: 6230639421799902633}
-  m_Layer: 15
+  m_Layer: 16
   m_Name: 8BallThrowable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isActive: 0
-  _initialActive: 0
 --- !u!1001 &4393967927974716657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273,7 +272,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1503750668910245220, guid: 299c41ca88cfddf488364bbae7975fe3, type: 3}
       propertyPath: m_Layer
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7068538192017069831, guid: 299c41ca88cfddf488364bbae7975fe3, type: 3}
       propertyPath: m_RootOrder
@@ -337,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7589601818238635453, guid: 299c41ca88cfddf488364bbae7975fe3, type: 3}
       propertyPath: m_Layer
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 299c41ca88cfddf488364bbae7975fe3, type: 3}

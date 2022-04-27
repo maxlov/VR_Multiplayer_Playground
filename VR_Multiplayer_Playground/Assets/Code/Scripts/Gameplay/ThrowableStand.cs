@@ -31,7 +31,13 @@ public class ThrowableStand : MonoBehaviour
         SpawnObject();
     }
 
-    public void NetworkLoadBar()
+	//private void OnTriggerExit(Collider other)
+	//{
+ //       if (other.CompareTag("Throwable"))
+ //           NetworkLoadBar();
+ //   }
+
+	public void NetworkLoadBar()
     {
         photonView.RPC("LoadBar", RpcTarget.All);
         photonView.RPC("ToggleSocket", RpcTarget.All, false);
