@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5099985382183130301}
   - component: {fileID: 7439545834707231647}
   - component: {fileID: 8458771495459825941}
+  - component: {fileID: -7101832275023215992}
   m_Layer: 0
   m_Name: Network Manager
   m_TagString: Untagged
@@ -238,3 +239,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-7101832275023215992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5099985382183130296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c360ecbb560278240a1d609097e43b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variablesToReset:
+  - {fileID: 11400000, guid: 901a568b636a302478db7f200cbe02eb, type: 2}
+  - {fileID: 11400000, guid: cad0daf0da8899e469b7ae8c84800e28, type: 2}
+  - {fileID: 11400000, guid: 35cf9c054e8fc504392137c9d504235e, type: 2}
+  - {fileID: 11400000, guid: 7ccd9a27f80ac3a4f85696858d6e93fe, type: 2}
+  - {fileID: 11400000, guid: 731c84a9b17a71d4c85d77544d6a696a, type: 2}
+  - {fileID: 11400000, guid: 090d93d4dc40bf24789b5b1d4df70094, type: 2}
+  - {fileID: 11400000, guid: 817658bdd0fa35a4e861c95ad6784761, type: 2}
+  - {fileID: 11400000, guid: e5855ad913605d243853e513037c32dd, type: 2}
+  - {fileID: 11400000, guid: d8b301c3452bc1a4aabf1156400d0edd, type: 2}
+  - {fileID: 11400000, guid: 4c4b85b353cad374f8863c667205c40e, type: 2}
+  - {fileID: 11400000, guid: 310e51ee2c8e63843828ad748ad3fcd8, type: 2}
+  - {fileID: 11400000, guid: 6c184fe440dc7454dae8766e6b2a5b56, type: 2}
+  - {fileID: 11400000, guid: 85d4c3292a09c8b4197b53162b7c8fc6, type: 2}
+  resetEvent: {fileID: 11400000, guid: 06f4c11c93372844893c6b9c281301f7, type: 2}

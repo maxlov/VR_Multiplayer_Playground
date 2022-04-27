@@ -7560,6 +7560,7 @@ GameObject:
   - component: {fileID: 3727305520159418801}
   - component: {fileID: 3727305520159418806}
   - component: {fileID: 7591799139251201876}
+  - component: {fileID: 8531313698918600735}
   m_Layer: 12
   m_Name: XR Origin
   m_TagString: Untagged
@@ -7689,6 +7690,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mover: {fileID: 3727305520452892914}
   _speed: {fileID: 11400000, guid: 817658bdd0fa35a4e861c95ad6784761, type: 2}
+--- !u!114 &8531313698918600735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3727305520159418811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd41b8fd24c66e44841d94414b93580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4b4f7fff4dc5fb242ba3aecf3f14da11, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3727305520159418801}
+        m_TargetAssemblyTypeName: PlayerControllerVertical, Assembly-CSharp
+        m_MethodName: SetupJumpVariables
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3727305520351110507
 GameObject:
   m_ObjectHideFlags: 0

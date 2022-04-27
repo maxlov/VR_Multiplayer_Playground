@@ -13,6 +13,7 @@ public class FloatVariableMultiplier : MonoBehaviour
     private int maxLevel = 15;
     [SerializeField] private FloatVariable statCost;
     [SerializeField] private UnityEvent ScoreUpdateEvent;
+    [SerializeField] private UnityEvent StatUpgradeEvent;
 
     public void Multiply()
     {
@@ -39,7 +40,7 @@ public class FloatVariableMultiplier : MonoBehaviour
 
             //Change the Stat
             Multiply();
-
+            StatUpgradeEvent.Invoke();
             //Stat Stuff
             statCost.Value = (statLevel.Value *(statLevel.Value+1f))/2;
             statLevel.Value++;

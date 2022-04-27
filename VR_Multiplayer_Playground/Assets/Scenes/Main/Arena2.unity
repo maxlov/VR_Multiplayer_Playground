@@ -4896,7 +4896,7 @@ Transform:
   - {fileID: 1782071539}
   - {fileID: 371216789}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &732112862
 PrefabInstance:
@@ -19121,7 +19121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 289305291, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: isTicking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 289305292, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: playerHealthBar
