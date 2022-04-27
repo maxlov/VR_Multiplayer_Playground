@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbb696cce0fa2c4ba778f9d4b27d24f, type: 3}
   m_Name: SFX_Yeet
   m_EditorClassIdentifier: 
-  clips: []
-  volume: {x: 0.5, y: 0.5}
-  pitch: {x: 1, y: 1}
-  spatialBlend: 0
-  audioMixerGroup: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 75b026c3f3a1278419d42c9ad79df7d9, type: 3}
+  - {fileID: 8300000, guid: 257a382898427544dac79f04b327bd4d, type: 3}
+  - {fileID: 8300000, guid: 884f6da43eb2a774f909af4c4bedcd8d, type: 3}
+  volume: {x: 0.3, y: 0.3}
+  pitch: {x: 0.9, y: 1.1}
+  spatialBlend: 0.9
+  audioMixerGroup: {fileID: -529002028008718470, guid: bfa6165f95d087242af12b6a7d1a8467, type: 2}
   playOrder: 0
-  playIndex: 0
+  playIndex: 1

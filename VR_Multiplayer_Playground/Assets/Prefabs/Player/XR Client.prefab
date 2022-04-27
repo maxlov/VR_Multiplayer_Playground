@@ -7487,6 +7487,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 856709755}
+        m_TargetAssemblyTypeName: NetworkCharacterSFX, Assembly-CSharp
+        m_MethodName: PlayYeetAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -8004,6 +8016,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AnimatePlayerHands, Assembly-CSharp
         m_MethodName: SetGrabAnimationLeft
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 856709755}
+        m_TargetAssemblyTypeName: NetworkCharacterSFX, Assembly-CSharp
+        m_MethodName: PlayYeetAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -23705,6 +23729,7 @@ MonoBehaviour:
   deathSFX: {fileID: 11400000, guid: 6caf4c560934c4b49873c5bbf7b2c244, type: 2}
   pickupSFX: {fileID: 11400000, guid: 421b30657b5b2694fbe23e8ea2fdd75d, type: 2}
   jumpSFX: {fileID: 11400000, guid: da83103fe2f28b94f8cfb84e451b5f7e, type: 2}
+  yeetSFX: {fileID: 11400000, guid: daebda936d94ee5469246a38a6191ab1, type: 2}
 --- !u!1 &6975535793610495922
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,9 @@ public class NetworkCharacterSFX : MonoBehaviourPun
     [Header("Jump SFX")]
     public SoundEffectSO jumpSFX;
 
+    [Header("Yeet SFX")]
+    public SoundEffectSO yeetSFX;
+
     void Start()
     {
         damageEventListener = gameObject.AddComponent<GameEventListener>();
@@ -61,6 +64,11 @@ public class NetworkCharacterSFX : MonoBehaviourPun
         photonView.RPC("RPC_PlayPickupAudio", RpcTarget.All, transform.position);
     }
 
+    public void PlayYeetAudio()
+    {
+        photonView.RPC("RPC_PlayYeetAudio", RpcTarget.All, transform.position);
+    }
+
     [PunRPC]
     private void RPC_PlayDeathAudio(Vector3 position)
     {
@@ -83,5 +91,11 @@ public class NetworkCharacterSFX : MonoBehaviourPun
     private void RPC_PlayPickupAudio(Vector3 position)
     {
         pickupSFX.Play(position);
+    }
+
+    [PunRPC]
+    private void RPC_PlayYeetAudio(Vector3 position)
+    {
+        yeetSFX.Play(position);
     }
 }
