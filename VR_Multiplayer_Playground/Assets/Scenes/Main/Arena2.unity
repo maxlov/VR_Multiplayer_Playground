@@ -784,6 +784,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1025091457}
     - target: {fileID: 4183030592770826105, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: respawnSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183030592770826105, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: throwableName
       value: 8BallThrowable
       objectReference: {fileID: 0}
@@ -18834,10 +18838,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1697647747}
     m_Modifications:
-    - target: {fileID: 1448528408403327609, guid: ae99f4956afbed742845640d7f38850d, type: 3}
-      propertyPath: sceneViewId
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 4183030591695026788, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -18886,18 +18886,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThrowableStand Cursor
       objectReference: {fileID: 0}
-    - target: {fileID: 4183030591695026789, guid: ae99f4956afbed742845640d7f38850d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4183030592205364633, guid: ae99f4956afbed742845640d7f38850d, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1025091457}
-    - target: {fileID: 4183030592770826106, guid: ae99f4956afbed742845640d7f38850d, type: 3}
-      propertyPath: m_InteractionManager
-      value: 
-      objectReference: {fileID: 1025091458}
+    - target: {fileID: 4183030592770826105, guid: ae99f4956afbed742845640d7f38850d, type: 3}
+      propertyPath: respawnSpeed
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae99f4956afbed742845640d7f38850d, type: 3}
 --- !u!4 &4183030592770826102 stripped

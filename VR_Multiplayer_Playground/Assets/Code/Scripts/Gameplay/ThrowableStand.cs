@@ -14,7 +14,9 @@ public class ThrowableStand : MonoBehaviour
     [SerializeField] private Slider loadingBar;
     [SerializeField] private float respawnSpeed = 5f;
 
-    private bool startLoading = false;
+    private bool _startLoading = false;
+    private bool _canLoad = true;
+    private GameObject _throwable;
 
     private PhotonView photonView;
 
@@ -30,47 +32,51 @@ public class ThrowableStand : MonoBehaviour
         yield return new WaitForSeconds(2);
         SpawnObject();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Throwable") && _canLoad)
+            if (_throwable == null)
+                _throwable = other.gameObject;
+    }
 
-	//private void OnTriggerExit(Collider other)
-	//{
- //       if (other.CompareTag("Throwable"))
- //           NetworkLoadBar();
- //   }
+    private void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject == _throwable)
+		{
+            NetworkLoadBar();
+        }
+	}
 
 	public void NetworkLoadBar()
     {
-        photonView.RPC("LoadBar", RpcTarget.All);
-        photonView.RPC("ToggleSocket", RpcTarget.All, false);
+        if (_canLoad)
+            photonView.RPC("LoadBar", RpcTarget.All);
     }
 
     [PunRPC]
     public void LoadBar()
     {
         loadingBar.value = 0;
-        startLoading = true;
+        _startLoading = true;
         loadingUI.SetActive(true);
+        _canLoad = false;
     }
 
     void Update()
     {
-        if (startLoading)
+        if (_startLoading)
 		{
             loadingBar.value += respawnSpeed * Time.deltaTime;
             if (loadingBar.value >= loadingBar.maxValue)
 			{
-                startLoading = false;
+                _startLoading = false;
                 loadingUI.SetActive(false);
-                photonView.RPC("ToggleSocket", RpcTarget.All, true);
+                _throwable = null;
+                _canLoad = true;
                 SpawnObject();
             }
         }
     }
-
-    [PunRPC]
-    void ToggleSocket(bool toggle)
-	{
-        spawnPoint.gameObject.SetActive(toggle);
-	}
 
     void SpawnObject()
 	{

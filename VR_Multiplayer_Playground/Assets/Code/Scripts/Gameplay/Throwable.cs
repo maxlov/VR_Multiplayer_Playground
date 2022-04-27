@@ -13,7 +13,6 @@ public class Throwable : MonoBehaviour
     public UnityEvent onHit;
 
     [SerializeField] private bool _isActive = false;
-    [SerializeField] private bool _initialActive = false;
 
     private int debugStage = 0;
 
@@ -31,11 +30,6 @@ public class Throwable : MonoBehaviour
     {
         Debug.Log(gameObject.name + " Acrivate: " + input.ToString() + " Stage: " + debugStage.ToString());
         debugStage += 1;
-		if (input == true && _initialActive == false)
-		{
-			_initialActive = true;
-			return;
-		}
 		_isActive = input;
     }
 

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 128389320998908982}
   m_Layer: 16
   m_Name: FijiThrowable
-  m_TagString: Untagged
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,7 +263,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isActive: 0
-  _initialActive: 0
 --- !u!1001 &1722921789663938779
 PrefabInstance:
   m_ObjectHideFlags: 0
