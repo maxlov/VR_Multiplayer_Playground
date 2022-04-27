@@ -8,6 +8,7 @@ using Unity.XR.CoreUtils;
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
     [HideInInspector] public GameObject player;
+    private Transform hats;
 
     private Vector3 initialSpawn;
 
@@ -55,6 +56,14 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         networkPlayer.headOrigin = clientHeadTracker;
         networkPlayer.leftHandOrigin = clientLeftHandTracker;
         networkPlayer.rightHandOrigin = clientRightHandTracker;
+
+        if (!newPlayer.GetComponent<PhotonView>().IsMine)
+            return;
+        var hatID = PhotonNetwork.LocalPlayer.CustomProperties["Hat"];
+        if (hatID != null)
+        {
+            networkPlayer.ChooseHat((int)hatID);
+        }
     }
 
     public override void OnLeftRoom()
@@ -91,5 +100,11 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     public void JoinTeam()
     {
         JoinTeam((int)teamToJoin.Value);
+    }
+
+    public void OnHatChange()
+    {
+        int hatID = (int)PhotonNetwork.LocalPlayer.CustomProperties["Hat"];
+        player.GetComponent<NetworkPlayer>().ChooseHat(hatID);
     }
 }

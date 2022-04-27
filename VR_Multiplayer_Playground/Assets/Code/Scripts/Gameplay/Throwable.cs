@@ -13,6 +13,7 @@ public class Throwable : MonoBehaviour
     public UnityEvent onHit;
 
     [SerializeField] private bool _isActive = false;
+    [SerializeField] private bool _initialActive = false;
 
     private void Start()
 	{
@@ -26,6 +27,11 @@ public class Throwable : MonoBehaviour
     [PunRPC]
     void RPC_Active(bool input)
     {
+        if (input == true && _initialActive == false)
+        {
+            _initialActive = true;
+            return;
+        }
         _isActive = input;
     }
 

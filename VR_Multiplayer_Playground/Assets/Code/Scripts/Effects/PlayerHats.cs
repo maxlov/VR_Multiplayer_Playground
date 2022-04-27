@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using Photon.Pun;
 
 public class PlayerHats : MonoBehaviour
 {
 	[SerializeField] private Transform hats;
-	[SerializeField] private NetworkPlayerSpawner networkPlayer;
+	[SerializeField] private UnityEvent hatChangeEvent;
 
 	public int HatIndex;
 
@@ -19,7 +21,9 @@ public class PlayerHats : MonoBehaviour
 			else
 				hats.GetChild(i).gameObject.SetActive(false);
 		}
-		if (networkPlayer.player)
-			networkPlayer.player.GetComponent<NetworkPlayer>().ChooseHat(HatIndex);
+		var hash = PhotonNetwork.LocalPlayer.CustomProperties;
+		hash["Hat"] = HatIndex;
+		PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+		hatChangeEvent.Invoke();
 	}
 }

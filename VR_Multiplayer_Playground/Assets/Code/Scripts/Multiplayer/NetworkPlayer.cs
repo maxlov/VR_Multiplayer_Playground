@@ -30,7 +30,7 @@ public class NetworkPlayer : MonoBehaviour
     public UnityEvent onDeath;
     public UnityEvent onRespawn;
 
-    private void Start()
+    private void Awake()
     {
         photonView = GetComponent<PhotonView>();
 
@@ -115,6 +115,7 @@ public class NetworkPlayer : MonoBehaviour
     [PunRPC]
      void RPC_ChooseHat(int index)
 	{
+        Debug.Log("Choosing hat " + index);
 		for (int i = 0; i < hats.childCount; i++)
 		{
             if (i == index && !photonView.IsMine)
