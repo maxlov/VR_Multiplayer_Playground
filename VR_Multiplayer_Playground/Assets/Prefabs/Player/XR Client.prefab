@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 412491024009552845}
   - component: {fileID: 412491024009552847}
   - component: {fileID: 412491024009552846}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Right Hand Physics
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 412491024335177065}
   - component: {fileID: 412491024335177064}
   - component: {fileID: 412491024335177063}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 412491024360119891}
   - component: {fileID: 412491024360119893}
   - component: {fileID: 412491024360119892}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Left Hand Physics
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 412491024869640223}
   - component: {fileID: 412491024869640222}
   - component: {fileID: 412491024869640192}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
