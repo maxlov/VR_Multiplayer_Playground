@@ -71,6 +71,8 @@ MonoBehaviour:
   - RPC_Active
   - RPC_ToggleCollider
   - RPC_ChooseHat
+  - RPC_ResetObj
+  - RPC_ResetVariables
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

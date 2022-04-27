@@ -17,9 +17,12 @@ public class ObjectiveZone : MonoBehaviour
     private Timer timer;
     [SerializeField] private Transform resetObjPosition;
 
+    private PhotonView photonView;
+
     private void Awake()
     {
         timer = GetComponent<Timer>();
+        photonView = GetComponent<PhotonView>();
     }
 
     private void Start()
@@ -38,6 +41,12 @@ public class ObjectiveZone : MonoBehaviour
     }
 
     private void ResetObj()
+    {
+        photonView.RPC("RPC_ResetObj", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void RPC_ResetObj()
     {
         Collider[] objects = Physics.OverlapBox(transform.position, transform.localScale / 2);
         int count = 0;

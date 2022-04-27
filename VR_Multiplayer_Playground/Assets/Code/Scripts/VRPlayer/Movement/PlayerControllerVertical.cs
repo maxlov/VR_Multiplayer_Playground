@@ -63,7 +63,7 @@ public class PlayerControllerVertical : MonoBehaviour
             appliedYVelocity = Mathf.Max((previousYVelocity + currentYVelocity) * .5f, -20f);
 
             // reset player position when player has fallen
-            if (transform.position.y < -75) { transform.position = new Vector3(0, 75, 0); }
+            if (transform.position.y < -75) { transform.position = new Vector3(0, 30, 0); }
         }
         else
         {
