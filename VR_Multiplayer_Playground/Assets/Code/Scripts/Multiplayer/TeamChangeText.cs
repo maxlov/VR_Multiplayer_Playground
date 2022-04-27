@@ -15,9 +15,9 @@ public class TeamChangeText : MonoBehaviour
     private string redTeam = "";
     private string blueTeam = "";
 
-    public void SpectateTeamSet()
+    public void TeamChanger()
     {
-        // Get the player's names that are connected
+        // Update List of names for each team after join or button is pushed
         foreach(Player p in PhotonNetwork.PlayerList)
         {
             // Check if they are part of the spectators team
@@ -26,37 +26,25 @@ public class TeamChangeText : MonoBehaviour
                 // If they are and have a nickname add their name
                 if(p.NickName != null)
                     namedSpectators += $"<br> {p.NickName}!";
-                else
-                {
-                    namedSpectators += " <br> doesn't exist";
-                }
+            }
+            // Check if they are part of the red team
+            else if ((int)p.CustomProperties["Team"] == 1)
+            {
+                // If they are and have a nickname add their name
+                if(p.NickName != null)
+                    redTeam += $"<br> {p.NickName}!";
+            }
+            // Check if they are part of the blue team
+            else if ((int)p.CustomProperties["Team"] == 2)
+            {
+                // If they are and have a nickname add their name
+                if(p.NickName != null)
+                    blueTeam += $"<br> {p.NickName}!";
             }
         }
-        // Set up the new text
-        spectatorText.text += namedSpectators;
-    }
-
-    public void TeamChanger()
-    {
-        // Get the person's team number
-        string playerName = (string)PhotonNetwork.LocalPlayer.NickName;
-        int playerTeam = (int)PhotonNetwork.LocalPlayer.CustomProperties["Team"];
-
-        // Add their name under their team
-        if (playerTeam == 2)
-        {
-            blueTeam += $"<br> {playerName}";
-        } else if (playerTeam == 1)
-        {
-            redTeam += $"<br> {playerName}";
-        } else
-        {
-            namedSpectators += $"<br> {playerName}!";
-        }
-
         // Update the TMPGUI with nickname
-        blueTeamText.text += blueTeam;
-        redTeamText.text += redTeam;
-        spectatorText.text += namedSpectators;
+        blueTeamText.text = blueTeam;
+        redTeamText.text = redTeam;
+        spectatorText.text = namedSpectators;
     }
 }
