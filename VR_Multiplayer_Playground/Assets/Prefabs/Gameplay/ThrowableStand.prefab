@@ -53,7 +53,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 4183030592573255611}
   loadingUI: {fileID: 4183030592570367734}
   loadingBar: {fileID: 4183030592726865151}
-  respawnSpeed: 10
+  respawnSpeed: 30
 --- !u!114 &1448528408403327609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.10399997}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 70, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4183030592748816233
 CanvasRenderer:
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Only 50 pts!
+  m_text: Only 10 pts!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -620,8 +620,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11.3
+  m_fontSizeBase: 11.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
