@@ -28,8 +28,6 @@ public class Throwable : MonoBehaviour
     [PunRPC]
     void RPC_Active(bool input)
     {
-        Debug.Log(gameObject.name + " Acrivate: " + input.ToString() + " Stage: " + debugStage.ToString());
-        debugStage += 1;
 		_isActive = input;
     }
 

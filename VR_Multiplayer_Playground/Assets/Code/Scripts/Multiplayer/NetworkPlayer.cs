@@ -76,10 +76,10 @@ public class NetworkPlayer : MonoBehaviour
     [PunRPC]
     void Death()
 	{
-        Debug.Log("Network Player Died");
         onDeath.Invoke();
         if (!photonView.IsMine)
 		{
+            Debug.Log("Hide Network Player on Death");
             mesh.gameObject.SetActive(false);
             beltParticles.SetActive(false);
         }

@@ -55,7 +55,6 @@ public class HealthManager : MonoBehaviour
         playerHealthBar.value = health.Value;
         if (playerSpawnerScript.player != null)
         {
-            Debug.Log("Network Player took damage");
             playerSpawnerScript.player.GetComponent<NetworkPlayer>().NetworkPlayerTakeDamage(health.Value);
         }
     }

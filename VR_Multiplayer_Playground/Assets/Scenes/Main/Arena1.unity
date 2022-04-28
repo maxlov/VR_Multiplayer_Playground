@@ -11182,7 +11182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6266230598281538068, guid: a6613af3c8aa1134188c9d28afd8f3fd, type: 3}
       propertyPath: pointsOnScore.ConstantValue
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6548832511471625665, guid: a6613af3c8aa1134188c9d28afd8f3fd, type: 3}
       propertyPath: m_RootOrder
@@ -23955,7 +23955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6266230598281538068, guid: a6613af3c8aa1134188c9d28afd8f3fd, type: 3}
       propertyPath: pointsOnScore.ConstantValue
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6548832511471625665, guid: a6613af3c8aa1134188c9d28afd8f3fd, type: 3}
       propertyPath: m_RootOrder
@@ -24016,7 +24016,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 289305291, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: isTicking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 289305292, guid: f5f9fb451497e7447bf755219a8fae1e, type: 3}
       propertyPath: playerHealthBar

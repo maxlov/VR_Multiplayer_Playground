@@ -82,7 +82,5 @@ public class ThrowableStand : MonoBehaviour
         if (!PhotonNetwork.IsMasterClient)
             return;
         var spawned = PhotonNetwork.Instantiate(throwableName, spawnPoint.position, spawnPoint.rotation);
-        //if (spawned.TryGetComponent<Throwable>(out _throwableScript))
-        //    _throwableScript.throwableStand = this;
     }
 }
