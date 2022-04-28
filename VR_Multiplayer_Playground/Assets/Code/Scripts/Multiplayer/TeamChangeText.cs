@@ -11,12 +11,14 @@ public class TeamChangeText : MonoBehaviour
     [SerializeField] private TextMeshProUGUI spectatorText;
     [SerializeField] private TextMeshProUGUI redTeamText;
     [SerializeField] private TextMeshProUGUI blueTeamText;
-    private string namedSpectators = "";
-    private string redTeam = "";
-    private string blueTeam = "";
 
     public void TeamChanger()
     {
+        // Set brand new strings to be populated
+        string namedSpectators = "";
+        string redTeam = "";
+        string blueTeam = "";
+
         // Update List of names for each team after join or button is pushed
         foreach(Player p in PhotonNetwork.PlayerList)
         {
