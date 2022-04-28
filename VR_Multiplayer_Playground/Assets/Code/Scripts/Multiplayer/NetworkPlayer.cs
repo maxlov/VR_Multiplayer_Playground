@@ -76,12 +76,13 @@ public class NetworkPlayer : MonoBehaviour
     [PunRPC]
     void Death()
 	{
+        Debug.Log("Network Player Died");
         onDeath.Invoke();
         if (!photonView.IsMine)
 		{
             mesh.gameObject.SetActive(false);
             beltParticles.SetActive(false);
-        }     
+        }
     }
 
     public void NetworkPlayerRespawn()
@@ -102,7 +103,7 @@ public class NetworkPlayer : MonoBehaviour
 
     IEnumerator RespawnWait()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         mesh.gameObject.SetActive(true);
         beltParticles.SetActive(true);
     }
@@ -115,7 +116,7 @@ public class NetworkPlayer : MonoBehaviour
     [PunRPC]
      void RPC_ChooseHat(int index)
 	{
-        Debug.Log("Choosing hat " + index);
+        //Debug.Log("Choosing hat " + index);
 		for (int i = 0; i < hats.childCount; i++)
 		{
             if (i == index && !photonView.IsMine)

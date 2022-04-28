@@ -52,6 +52,7 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         var newPlayer = PhotonNetwork.Instantiate("Network Player 2", initialSpawn, Quaternion.identity);
         if (newPlayer.GetComponent<PhotonView>().IsMine)
             player = newPlayer;
+        Debug.Log("Network Player Created: " + player.name);
         NetworkPlayer networkPlayer = newPlayer.GetComponent<NetworkPlayer>();
         networkPlayer.headOrigin = clientHeadTracker;
         networkPlayer.leftHandOrigin = clientLeftHandTracker;
