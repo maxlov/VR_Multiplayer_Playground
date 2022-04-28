@@ -1714,7 +1714,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 817658bdd0fa35a4e861c95ad6784761, type: 2}
   percentIncrease:
     UseConstant: 1
-    ConstantValue: 0.01
+    ConstantValue: 0.2
     Variable: {fileID: 0}
   timePercentInc:
     UseConstant: 1

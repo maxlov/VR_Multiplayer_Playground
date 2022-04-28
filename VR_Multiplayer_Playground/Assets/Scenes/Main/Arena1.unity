@@ -6714,7 +6714,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 766004366805917565, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: percentIncrease.ConstantValue
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4018902675100021834, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_Name
@@ -6734,7 +6734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6573266792191716624, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: percentIncrease.ConstantValue
-      value: 0.45
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 7492076235486189293, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -12501,7 +12501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689021385472434177, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_margin.z
-      value: 120.82973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7560889048270002554, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12517,11 +12517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8937046506597558895, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_margin.x
-      value: -0.92398834
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8937046506597558895, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_margin.z
-      value: 118.39924
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9159905723305270475, guid: 7d7801ab3cdecab4f89b705e2abdc2c9, type: 3}
       propertyPath: m_PixelPerfect
@@ -19207,7 +19207,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 766004366805917565, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: percentIncrease.ConstantValue
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4018902675100021834, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_Name
@@ -19220,6 +19220,14 @@ PrefabInstance:
     - target: {fileID: 5813625646034654480, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.000000028320311
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573266792191716624, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
+      propertyPath: timePercentInc.ConstantValue
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573266792191716624, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
+      propertyPath: percentIncrease.ConstantValue
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 7492076235486189293, guid: dd227be78bdf8134ab9e78a0a36a9a0a, type: 3}
       propertyPath: m_ConnectedAnchor.x
