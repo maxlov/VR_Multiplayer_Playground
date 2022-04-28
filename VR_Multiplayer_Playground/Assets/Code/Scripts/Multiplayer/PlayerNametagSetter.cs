@@ -16,13 +16,12 @@ public class PlayerNametagSetter : MonoBehaviour
         var photonView = GetComponent<PhotonView>();
         if (!photonView.IsMine)
             return;
-        photonView.RPC("RPC_UpdateNametag", RpcTarget.AllBuffered);
+        photonView.RPC("RPC_UpdateNametag", RpcTarget.AllBuffered, PhotonNetwork.LocalPlayer.NickName);
     }
 
     [PunRPC]
-    private void RPC_UpdateNametag()
+    private void RPC_UpdateNametag(string name)
     {
-        nametag.text = PhotonNetwork.LocalPlayer.NickName;
+        nametag.text = name;
     }
-
 }
