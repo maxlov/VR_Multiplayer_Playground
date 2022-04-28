@@ -21,6 +21,7 @@ public class HealthManager : MonoBehaviour
 
     void Start()
     {
+        playerSpawnerScript = FindObjectOfType<NetworkPlayerSpawner>();
         health.Value = health.defaultValue;
         ResetHealth();
     }
