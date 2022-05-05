@@ -1,4 +1,4 @@
-# [Welcome to Yaporball VR!](https://medium.com/@maxwell_lovell/devlog-0-welcome-to-yeetball-vr-b48156424c23)
+# [Welcome to Vaporball VR!](https://medium.com/@maxwell_lovell/devlog-0-welcome-to-yeetball-vr-b48156424c23)
 
 Our team is creating a fast-paced multiplayer VR game, where two small teams are pitted together against each other. The goal? Gain the most points by collecting and defending objective objects at your base, all the while acquiring upgrades for both your abilities and upgrading structures around your base. Make quick decisions between defending, upgrading, and attacking your opponents to win the game! Think of it somewhere between a game of capture the flag, dodge ball, and a MOBA. We felt like creating a unique experience that combines some of our favorite things in virtual reality, interacting with others, and feeling awesome. There’s nothing quite like flying through the air to make an awesome play, eliminating an opponent.
 
